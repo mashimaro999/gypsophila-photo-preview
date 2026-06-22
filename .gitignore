@@ -1,0 +1,13 @@
+# 本機備份 / 暫存腳本（唔部署）
+index.html.bak
+serve.ps1
+*.bak
+
+# 設計原檔（唔需要部署）
+images/Website_Source/
+
+# 未使用嘅對比圖
+images/og-image-logo.jpg
+
+# 注意：images/Portfolio/（約 1.4GB 原圖）暫未加入版本控制，
+# 待縮圖優化（web-size）後再決定是否提交。
