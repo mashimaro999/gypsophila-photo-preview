@@ -9,5 +9,8 @@ images/Website_Source/
 # 未使用嘅對比圖
 images/og-image-logo.jpg
 
-# 注意：images/Portfolio/（約 1.4GB 原圖）暫未加入版本控制，
-# 待縮圖優化（web-size）後再決定是否提交。
+# XnView 排序 sidecar 檔（非圖片）
+*.XnViewSort
+
+# 注意：images/Portfolio/ 已優化為 web-size（1600px / 約 24MB）並納入版本控制。
+# 原始全解析度相片備份於 D:\CursorProject\Website_Portfolio_Originals\（不提交）。
