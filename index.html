@@ -3,6 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G290ZRPY09"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G290ZRPY09');
+  </script>
+
   <title>Gypsophila Photography | 滿天星攝影 — 嬰兒·家庭·人像攝影 | 香港</title>
   <meta name="description" content="Gypsophila Photography 滿天星攝影 — 香港荃灣專業攝影工作室，專注孕婦攝影（大肚相 / 孕婦寫真）、初生嬰兒攝影（BB相）、百日照及家庭全家福。提供 Studio 及上門拍攝、化妝造型，以自然有溫度的鏡頭紀錄珍貴時刻。" />
   <meta name="keywords" content="Gypsophila Photography, 滿天星攝影, 孕婦攝影, 大肚相, 孕婦寫真, 韓式孕婦相, 初生嬰兒攝影, BB相, 初生相, newborn, 百日照, 百日宴相, 周歲相, 抓周, Cake Smash, 家庭攝影, 全家福, 親子相, 荃灣攝影, 香港攝影師, 上門影BB, baby photography Hong Kong, maternity newborn family photography, 攝影價目表" />
@@ -1638,6 +1648,38 @@
       } else if (floatCta) {
         floatCta.classList.add('show');
       }
+
+      // Track every outbound click to Instagram (which button + total referrals to IG)
+      function igClickLocation(a) {
+        if (a.classList.contains('float-cta') || a.closest('.float-cta')) return 'float_sticky';
+        if (a.closest('footer')) return 'footer';
+        if (a.closest('.cta-section')) return 'cta_bottom';
+        var sec = a.closest('section[id]');
+        var sid = sec ? sec.id : 'unknown';
+        if (sid === 'pricing') {
+          var panel = a.closest('.pricing-panel');
+          var cat = panel ? panel.getAttribute('data-panel') : '?';
+          var card = a.closest('.package-card');
+          var nameEl = card ? card.querySelector('.pkg-name') : null;
+          return 'pricing:' + cat + (nameEl ? ':' + nameEl.textContent.trim() : '');
+        }
+        return sid;
+      }
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        if (!/instagram\.com|ig\.me/i.test(href)) return;
+        if (typeof gtag !== 'function') return;
+        var m = href.match(/ig\.me\/m\/([^/?#]+)/i) || href.match(/instagram\.com\/([^/?#]+)/i);
+        gtag('event', 'ig_click', {
+          location: igClickLocation(a),
+          link_type: /ig\.me/i.test(href) ? 'dm' : 'profile',
+          ig_target: m ? m[1] : '',
+          link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60),
+          transport_type: 'beacon'
+        });
+      });
 
       var mainBtns = document.querySelectorAll('#mainFilters .filter-btn');
       var subMaternity = document.getElementById('subFiltersMaternity');
