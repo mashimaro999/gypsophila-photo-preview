@@ -666,15 +666,30 @@
     .pricing-tabs {
       display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;
       margin-bottom: 48px;
+      position: sticky; top: var(--nav-height); z-index: 60;
+      padding: 14px 0;
+      background: oklch(97.3% 0.012 165 / 0.92);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
     }
     .pricing-tab {
       padding: 12px 28px; border-radius: 999px; border: 1.5px solid var(--border);
-      background: transparent; cursor: pointer; font-size: 15px; font-weight: 500;
+      background: var(--surface); cursor: pointer; font-size: 15px; font-weight: 500;
       letter-spacing: 0.03em; color: var(--muted); transition: all var(--transition);
-      font-family: var(--font-body);
+      font-family: var(--font-body); white-space: nowrap;
     }
     .pricing-tab:hover { border-color: var(--accent); color: var(--accent-dark); background: var(--accent-subtle); }
     .pricing-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    @media (max-width: 768px) {
+      .pricing-tabs {
+        flex-wrap: nowrap; justify-content: flex-start;
+        overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 8px; padding: 10px 24px; margin: 0 -24px 28px;
+      }
+      .pricing-tabs::-webkit-scrollbar { display: none; }
+      .pricing-tab { flex-shrink: 0; padding: 9px 16px; font-size: 14px; letter-spacing: 0.01em; }
+    }
     .pricing-panel { display: none; }
     .pricing-panel.active { display: block; }
     .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -1459,7 +1474,7 @@
         <span class="promo-tag">🎁 限時優惠</span>
         <span class="promo-text">DM 查詢即可了解<strong>今期折扣及精修相贈送詳情</strong>，名額有限，先到先得。</span>
       </div>
-      <div class="pricing-tabs fade-in" id="pricingTabs">
+      <div class="pricing-tabs" id="pricingTabs">
         <button class="pricing-tab active" data-tab="maternity">🤰 孕婦攝影</button>
         <button class="pricing-tab" data-tab="newborn">🍼 Newborn 初生</button>
         <button class="pricing-tab" data-tab="100days">🎂 100 Days 百日</button>
@@ -1778,6 +1793,8 @@
         panel.querySelectorAll('.package-card a.btn').forEach(function (a) { a.href = url; });
       });
 
+      var pricingTabsBar = document.getElementById('pricingTabs');
+      var navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 72;
       document.querySelectorAll('.pricing-tab').forEach(function (t) {
         t.addEventListener('click', function () {
           document.querySelectorAll('.pricing-tab').forEach(function (x) { x.classList.remove('active'); });
@@ -1786,6 +1803,14 @@
           document.querySelectorAll('.pricing-panel').forEach(function (p) {
             p.classList.toggle('active', p.getAttribute('data-panel') === target);
           });
+          // Centre the tapped pill in the horizontal strip (mobile)
+          pricingTabsBar.scrollTo({ left: t.offsetLeft - (pricingTabsBar.clientWidth - t.clientWidth) / 2, behavior: 'smooth' });
+          // If the sticky tabs are already pinned (user scrolled into section), reset to the new panel's top
+          if (pricingTabsBar.getBoundingClientRect().top <= navH + 1) {
+            var panel = document.querySelector('.pricing-panel.active');
+            var y = window.scrollY + panel.getBoundingClientRect().top - navH - pricingTabsBar.offsetHeight - 8;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
         });
       });
 
