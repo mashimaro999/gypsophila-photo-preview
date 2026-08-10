@@ -119,10 +119,10 @@
       "@type": "OfferCatalog",
       "name": "攝影服務 Packages",
       "itemListElement": [
-        { "@type": "Offer", "priceCurrency": "HKD", "price": "2380", "itemOffered": { "@type": "Service", "name": "孕婦攝影 Maternity Photography", "description": "香港孕婦寫真，提供自然風及黑白／韓式風格，包化妝造型及孕婦服飾租借。" } },
+        { "@type": "Offer", "priceCurrency": "HKD", "price": "2800", "itemOffered": { "@type": "Service", "name": "孕婦攝影 Maternity Photography", "description": "香港孕婦寫真，提供自然風及黑白／韓式風格，包化妝造型及孕婦服飾租借。" } },
         { "@type": "Offer", "priceCurrency": "HKD", "price": "3800", "itemOffered": { "@type": "Service", "name": "初生嬰兒攝影 Newborn Photography", "description": "初生 BB 攝影，建議出生後 7-14 日拍攝，提供上門或工作室。" } },
         { "@type": "Offer", "priceCurrency": "HKD", "price": "3800", "itemOffered": { "@type": "Service", "name": "百日照攝影 100 Days Baby Photography", "description": "BB 百日紀念寫真，多款造型場景。" } },
-        { "@type": "Offer", "priceCurrency": "HKD", "price": "1800", "itemOffered": { "@type": "Service", "name": "家庭攝影 Family Photography", "description": "全家福、親子及大家族合照，最多可容納約 20 人。" } }
+        { "@type": "Offer", "priceCurrency": "HKD", "price": "2800", "itemOffered": { "@type": "Service", "name": "家庭攝影 Family Photography", "description": "全家福、親子及大家族合照，最多可容納約 20 人。" } }
       ]
     },
     "sameAs": [
@@ -149,7 +149,7 @@
       { "@type": "Question", "name": "Studio 可以最多容納幾多人拍攝？", "acceptedAnswer": { "@type": "Answer", "text": "大約 20 人左右都可以，適合大家族全家福。" } },
       { "@type": "Question", "name": "你哋影樓喺邊度？係咪荃灣？", "acceptedAnswer": { "@type": "Answer", "text": "我哋 Studio 位於荃灣 TML Tower，交通方便，大廈內設有停車場。" } },
       { "@type": "Question", "name": "有冇韓式大肚相（孕婦寫真）？", "acceptedAnswer": { "@type": "Answer", "text": "有，孕婦攝影（大肚相 / 孕婦寫真）提供自然風、黑白風及韓式風格，可按喜好配搭。" } },
-      { "@type": "Question", "name": "孕婦相、BB相、全家福大概幾錢？", "acceptedAnswer": { "@type": "Answer", "text": "孕婦攝影由 HKD 2,380 起、初生及百日照由 HKD 3,800 起、家庭攝影（全家福）由 HKD 1,800 起，實際收費視乎人數、場景及需求。" } },
+      { "@type": "Question", "name": "孕婦相、BB相、全家福大概幾錢？", "acceptedAnswer": { "@type": "Answer", "text": "孕婦攝影由 HKD 2,800 起、初生及百日照由 HKD 3,800 起、家庭攝影（全家福）由 HKD 2,800 起，實際收費視乎人數、場景及需求。" } },
       { "@type": "Question", "name": "有冇百日宴相、周歲抓周或 Cake Smash？", "acceptedAnswer": { "@type": "Answer", "text": "有，BABYG 提供百日照（百日宴相）、一歲生日照、周歲抓周及 Cake Smash 拍攝。" } }
     ]
   }
@@ -737,6 +737,34 @@
     }
     @media (max-width: 768px) { .packages-grid { grid-template-columns: 1fr; gap: 20px; } .package-card.featured::before { top: -12px; font-size: 11px; padding: 4px 14px; } }
 
+    .addon-panel { max-width: 720px; margin: 44px auto 0; }
+    .addon-box { border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); overflow: hidden; transition: all var(--transition); }
+    .addon-box:hover { border-color: var(--accent-light); }
+    .addon-box[open] { border-color: var(--accent); box-shadow: var(--shadow-card); }
+    .addon-box summary {
+      padding: 20px 26px; cursor: pointer; font-weight: 700; font-size: 16px;
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+      gap: 16px; user-select: none; transition: color var(--transition);
+    }
+    .addon-box summary::-webkit-details-marker { display: none; }
+    .addon-box[open] summary { color: var(--accent-dark); padding-bottom: 8px; }
+    .addon-box summary .addon-icon {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--accent-subtle); display: grid; place-items: center;
+      font-size: 18px; font-weight: 300; color: var(--accent-dark);
+      transition: transform 0.35s ease, background var(--transition);
+    }
+    .addon-box[open] summary .addon-icon { transform: rotate(45deg); background: var(--accent-light); }
+    .addon-box .addon-body { padding: 0 26px 24px; }
+    .addon-box .addon-lead { color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 12px; }
+    .addon-box .addon-list { list-style: none; }
+    .addon-box .addon-list li {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+      padding: 11px 0; border-bottom: 1px dashed var(--border); font-size: 15px;
+    }
+    .addon-box .addon-list li:last-child { border-bottom: none; }
+    .addon-box .addon-list .addon-price { flex-shrink: 0; font-weight: 700; color: var(--accent-dark); }
+    .addon-box .addon-foot { margin-top: 14px; color: var(--muted); font-size: 13px; line-height: 1.7; }
     .ratecard-note { text-align: center; padding: 48px 0 0; }
     .ratecard-note .note-card {
       display: inline-block; background: var(--surface); border: 1px solid var(--border);
@@ -1462,7 +1490,7 @@
         <details class="faq-item" data-cat="maternity"><summary>如果拍攝當日天氣惡劣？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">黑雨 / 8 號風球或以上，可安排<strong>免費改期一次</strong>。如需改期，請於化妝時間前最少兩小時通知我哋。</div></details>
         <details class="faq-item" data-cat="maternity"><summary>你哋影樓喺邊度？係咪荃灣？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋 Studio 位於<strong>荃灣 TML Tower</strong>，交通方便，大廈內設有停車場。</div></details>
         <details class="faq-item" data-cat="maternity"><summary>有冇韓式大肚相？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">有，孕婦攝影（大肚相 / 孕婦寫真）提供自然風、黑白風及韓式風格，可按你喜好配搭。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>孕婦相、BB相、全家福大概幾錢？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">孕婦攝影由 HKD 2,380 起、初生及百日照由 HKD 3,800 起、家庭攝影（全家福）由 HKD 1,800 起。實際收費視乎人數、場景及需求，詳情請參考價目表或 IG DM 查詢。</div></details>
+        <details class="faq-item" data-cat="maternity"><summary>孕婦相、BB相、全家福大概幾錢？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">孕婦攝影由 HKD 2,800 起、初生及百日照由 HKD 3,800 起、家庭攝影（全家福）由 HKD 2,800 起。實際收費視乎人數、場景及需求，詳情請參考價目表或 IG DM 查詢。</div></details>
 
         <details class="faq-item" data-cat="newborn"><summary>初生 BB 幾時拍攝最好？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">建議最佳拍攝期為出生後 <strong>7-14 日</strong>，因為呢個階段 BB嘅關節同肌肉仲係好柔軟，另外大部分時間處於深度睡眠，更容易配合拍攝。初生 BB 個樣變得好快，所以千祈唔好錯過呢個珍貴時刻。</div></details>
         <details class="faq-item" data-cat="newborn"><summary>預約流程係點？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">選擇 Package → 落訂確認 → 拍攝日期同時間可以預早約或等 BB 出世再約。</div></details>
@@ -1497,34 +1525,50 @@
 
       <div class="pricing-panel active" data-panel="maternity" data-ig-user="gypsophila_photo" data-ig-msg="你好,我想查詢孕婦攝影">
         <div class="packages-grid">
-          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌿</span><h3 class="pkg-name">Essential</h3><p class="pkg-price">HKD 2,380<small>起</small></p><p class="pkg-desc">輕盈孕婦寫真，紀錄呢段最特別嘅時光。</p><ul class="pkg-features"><li><span class="check">✓</span> 45 分鐘拍攝</li><li><span class="check">✓</span> 2 個場景（不包括山景）</li><li><span class="check">✓</span> 人數：2 人</li><li><span class="check">✓</span> 免費租借 2 套服飾（女士）</li><li><span class="check">✓</span> 5 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
-          <article class="package-card featured fade-in"><span class="pkg-icon" aria-hidden="true">✨</span><h3 class="pkg-name">Premium</h3><p class="pkg-price">HKD 4,380<small>起</small></p><p class="pkg-desc">最受歡迎，包埋山景同更多造型選擇。</p><ul class="pkg-features"><li><span class="check">✓</span> 90 分鐘拍攝</li><li><span class="check">✓</span> 不限場景（包括山景）</li><li><span class="check">✓</span> 人數：2 人</li><li><span class="check">✓</span> 免費租借 3 套服飾（女士）</li><li><span class="check">✓</span> 15 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-primary">立即預約</a></article>
-          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌟</span><h3 class="pkg-name">Signature</h3><p class="pkg-price">HKD 5,880<small>起</small></p><p class="pkg-desc">完整孕婦寫真體驗，黑白／韓式風格任選。</p><ul class="pkg-features"><li><span class="check">✓</span> 120 分鐘拍攝</li><li><span class="check">✓</span> 不限場景（包括山景）</li><li><span class="check">✓</span> 黑白風格／韓式風格</li><li><span class="check">✓</span> 人數：2 人</li><li><span class="check">✓</span> 免費租借 4 套服飾（女士）</li><li><span class="check">✓</span> 25 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
+          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌿</span><h3 class="pkg-name">Essential</h3><p class="pkg-price">HKD 2,800<small>起</small></p><p class="pkg-desc">簡約之選，紀錄呢段最特別嘅時光。</p><ul class="pkg-features"><li><span class="check">✓</span> 45 分鐘影樓拍攝</li><li><span class="check">✓</span> 1 小時專業化妝及髮型（準媽媽）</li><li><span class="check">✓</span> 準爸爸免費入鏡</li><li><span class="check">✓</span> 2 個場景任選（不包括山景）</li><li><span class="check">✓</span> 免費租借 2 套服飾（準媽媽）</li><li><span class="check">✓</span> 5 張精修相片（電子檔）</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
+          <article class="package-card featured fade-in"><span class="pkg-icon" aria-hidden="true">✨</span><h3 class="pkg-name">Premium</h3><p class="pkg-price">HKD 4,800<small>起</small></p><p class="pkg-desc">人氣首選，包埋山景同更多造型選擇。</p><ul class="pkg-features"><li><span class="check">✓</span> 90 分鐘影樓拍攝</li><li><span class="check">✓</span> 1 小時專業化妝及髮型（準媽媽）</li><li><span class="check">✓</span> 準爸爸免費入鏡</li><li><span class="check">✓</span> 不限場景（包括山景）</li><li><span class="check">✓</span> 免費租借 3 套服飾（準媽媽）</li><li><span class="check">✓</span> 15 張精修相片（電子檔）</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-primary">立即預約</a></article>
+          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌟</span><h3 class="pkg-name">Signature</h3><p class="pkg-price">HKD 5,800<small>起</small></p><p class="pkg-desc">尊尚之選，完整孕婦寫真體驗。</p><ul class="pkg-features"><li><span class="check">✓</span> 120 分鐘影樓拍攝</li><li><span class="check">✓</span> 1 小時專業化妝及髮型（準媽媽）</li><li><span class="check">✓</span> 準爸爸免費入鏡</li><li><span class="check">✓</span> 不限場景（包括山景）</li><li><span class="check">✓</span> 韓式 Pantone／黑白造型（打燈）</li><li><span class="check">✓</span> 免費租借 4 套服飾（準媽媽）</li><li><span class="check">✓</span> 免費租借歐洲 Handmade 裙</li><li><span class="check">✓</span> 25 張精修相片（電子檔）</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
         </div>
       </div>
 
       <div class="pricing-panel" data-panel="newborn" data-ig-user="BABYG.PHOTO" data-ig-msg="你好,我想查詢初生攝影">
         <div class="packages-grid">
-          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌿</span><h3 class="pkg-name">Essential</h3><p class="pkg-price">HKD 3,800<small>起</small></p><p class="pkg-desc">溫柔紀錄 BB 最初嘅模樣。</p><ul class="pkg-features"><li><span class="check">✓</span> 60 分鐘拍攝</li><li><span class="check">✓</span> 上門或工作室</li><li><span class="check">✓</span> 2 款造型場景</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
-          <article class="package-card featured fade-in"><span class="pkg-icon" aria-hidden="true">✨</span><h3 class="pkg-name">Premium</h3><p class="pkg-price">HKD 4,800<small>起</small></p><p class="pkg-desc">更多造型同精修選擇。</p><ul class="pkg-features"><li><span class="check">✓</span> 90 分鐘拍攝</li><li><span class="check">✓</span> 上門或工作室</li><li><span class="check">✓</span> 3 款造型場景</li><li><span class="check">✓</span> 5 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-primary">立即預約</a></article>
-          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌟</span><h3 class="pkg-name">Signature</h3><p class="pkg-price">HKD 5,800<small>起</small></p><p class="pkg-desc">完整初生寫真體驗。</p><ul class="pkg-features"><li><span class="check">✓</span> 120 分鐘拍攝</li><li><span class="check">✓</span> 上門或工作室</li><li><span class="check">✓</span> 4 款造型場景</li><li><span class="check">✓</span> 10 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
+          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌿</span><h3 class="pkg-name">Essential</h3><p class="pkg-price">HKD 3,800<small>起</small></p><p class="pkg-desc">入門精選，溫柔紀錄 BB 最初嘅模樣。</p><ul class="pkg-features"><li><span class="check">✓</span> 2 款造型風格設計</li><li><span class="check">✓</span> 60 分鐘專屬拍攝時間</li><li><span class="check">✓</span> 上門或工作室</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li><li><span class="check">✓</span> 所有衣物道具均經嬰兒級消毒</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
+          <article class="package-card featured fade-in"><span class="pkg-icon" aria-hidden="true">✨</span><h3 class="pkg-name">Premium</h3><p class="pkg-price">HKD 4,800<small>起</small></p><p class="pkg-desc">人氣首選・最多人揀，更多造型同精修。</p><ul class="pkg-features"><li><span class="check">✓</span> 3 款造型風格設計</li><li><span class="check">✓</span> 90 分鐘專屬拍攝時間</li><li><span class="check">✓</span> 上門或工作室</li><li><span class="check">✓</span> 送 5 張精修相片</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li><li><span class="check">✓</span> 所有衣物道具均經嬰兒級消毒</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-primary">立即預約</a></article>
+          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌟</span><h3 class="pkg-name">Signature</h3><p class="pkg-price">HKD 5,800<small>起</small></p><p class="pkg-desc">尊尚全記錄，完整初生寫真體驗。</p><ul class="pkg-features"><li><span class="check">✓</span> 4 款造型風格設計</li><li><span class="check">✓</span> 120 分鐘專屬拍攝時間</li><li><span class="check">✓</span> 上門或工作室</li><li><span class="check">✓</span> 送 10 張精修相片</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li><li><span class="check">✓</span> 所有衣物道具均經嬰兒級消毒</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
         </div>
       </div>
 
       <div class="pricing-panel" data-panel="100days" data-ig-user="BABYG.PHOTO" data-ig-msg="你好,我想查詢百日照攝影">
         <div class="packages-grid">
-          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌿</span><h3 class="pkg-name">Essential</h3><p class="pkg-price">HKD 3,800<small>起</small></p><p class="pkg-desc">百日紀念，紀錄 BB 第一個里程碑。</p><ul class="pkg-features"><li><span class="check">✓</span> 60 分鐘拍攝</li><li><span class="check">✓</span> 2 款造型場景</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
-          <article class="package-card featured fade-in"><span class="pkg-icon" aria-hidden="true">✨</span><h3 class="pkg-name">Premium</h3><p class="pkg-price">HKD 4,800<small>起</small></p><p class="pkg-desc">更多造型同精修選擇。</p><ul class="pkg-features"><li><span class="check">✓</span> 90 分鐘拍攝</li><li><span class="check">✓</span> 3 款造型場景</li><li><span class="check">✓</span> 5 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-primary">立即預約</a></article>
-          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌟</span><h3 class="pkg-name">Signature</h3><p class="pkg-price">HKD 5,800<small>起</small></p><p class="pkg-desc">完整百日寫真體驗。</p><ul class="pkg-features"><li><span class="check">✓</span> 120 分鐘拍攝</li><li><span class="check">✓</span> 4 款造型場景</li><li><span class="check">✓</span> 10 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
+          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌿</span><h3 class="pkg-name">Essential</h3><p class="pkg-price">HKD 3,800<small>起</small></p><p class="pkg-desc">入門精選，紀錄 BB 第一個里程碑。</p><ul class="pkg-features"><li><span class="check">✓</span> 2 款造型風格設計</li><li><span class="check">✓</span> 60 分鐘專屬拍攝時間</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li><li><span class="check">✓</span> 所有衣物道具均經嬰兒級消毒</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
+          <article class="package-card featured fade-in"><span class="pkg-icon" aria-hidden="true">✨</span><h3 class="pkg-name">Premium</h3><p class="pkg-price">HKD 4,800<small>起</small></p><p class="pkg-desc">人氣首選・最多人揀，更多造型同精修。</p><ul class="pkg-features"><li><span class="check">✓</span> 3 款造型風格設計</li><li><span class="check">✓</span> 90 分鐘專屬拍攝時間</li><li><span class="check">✓</span> 送 5 張精修相片</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li><li><span class="check">✓</span> 所有衣物道具均經嬰兒級消毒</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-primary">立即預約</a></article>
+          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌟</span><h3 class="pkg-name">Signature</h3><p class="pkg-price">HKD 5,800<small>起</small></p><p class="pkg-desc">尊尚全記錄，完整百日寫真體驗。</p><ul class="pkg-features"><li><span class="check">✓</span> 4 款造型風格設計</li><li><span class="check">✓</span> 120 分鐘專屬拍攝時間</li><li><span class="check">✓</span> 送 10 張精修相片</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li><li><span class="check">✓</span> 所有衣物道具均經嬰兒級消毒</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
         </div>
       </div>
 
       <div class="pricing-panel" data-panel="family" data-ig-user="FAMILYG.PHOTO" data-ig-msg="你好,我想查詢家庭攝影">
         <div class="packages-grid">
-          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌿</span><h3 class="pkg-name">Essential</h3><p class="pkg-price">HKD 1,800<small>起</small></p><p class="pkg-desc">簡單家庭照，紀錄最自然嘅日常。</p><ul class="pkg-features"><li><span class="check">✓</span> 40 分鐘拍攝</li><li><span class="check">✓</span> 2 個場景（不包括山景）</li><li><span class="check">✓</span> 人數：4 人內</li><li><span class="check">✓</span> 5 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
-          <article class="package-card featured fade-in"><span class="pkg-icon" aria-hidden="true">✨</span><h3 class="pkg-name">Premium</h3><p class="pkg-price">HKD 3,300<small>起</small></p><p class="pkg-desc">一家人嘅完整紀錄，最受歡迎。</p><ul class="pkg-features"><li><span class="check">✓</span> 60 分鐘拍攝</li><li><span class="check">✓</span> 不限場景</li><li><span class="check">✓</span> 人數：10 人內</li><li><span class="check">✓</span> 12 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-primary">立即預約</a></article>
-          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌟</span><h3 class="pkg-name">Signature</h3><p class="pkg-price">HKD 5,300<small>起</small></p><p class="pkg-desc">三代同堂、大家族全紀錄。</p><ul class="pkg-features"><li><span class="check">✓</span> 90 分鐘拍攝</li><li><span class="check">✓</span> 不限場景</li><li><span class="check">✓</span> 人數：20 人內</li><li><span class="check">✓</span> 20 張精修相片</li><li><span class="check">✓</span> 全部已調色相片</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
+          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌿</span><h3 class="pkg-name">Essential</h3><p class="pkg-price">HKD 2,800<small>起</small></p><p class="pkg-desc">簡約之選，紀錄一家人最自然嘅日常。</p><ul class="pkg-features"><li><span class="check">✓</span> 45 分鐘影樓拍攝</li><li><span class="check">✓</span> 人數：10 人內</li><li><span class="check">✓</span> 2 個場景任選（不包括山景）</li><li><span class="check">✓</span> 5 張精修相片（電子檔）</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
+          <article class="package-card featured fade-in"><span class="pkg-icon" aria-hidden="true">✨</span><h3 class="pkg-name">Premium</h3><p class="pkg-price">HKD 4,800<small>起</small></p><p class="pkg-desc">最多人揀・最抵玩，一家人嘅完整紀錄。</p><ul class="pkg-features"><li><span class="check">✓</span> 90 分鐘影樓拍攝</li><li><span class="check">✓</span> 人數：10 人內</li><li><span class="check">✓</span> 不限場景（包括山景）</li><li><span class="check">✓</span> 15 張精修相片（電子檔）</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-primary">立即預約</a></article>
+          <article class="package-card fade-in"><span class="pkg-icon" aria-hidden="true">🌟</span><h3 class="pkg-name">Signature</h3><p class="pkg-price">HKD 5,800<small>起</small></p><p class="pkg-desc">尊尚之選，三代同堂大家族全紀錄。</p><ul class="pkg-features"><li><span class="check">✓</span> 120 分鐘影樓拍攝</li><li><span class="check">✓</span> 人數：10 人內</li><li><span class="check">✓</span> 不限場景（包括山景）</li><li><span class="check">✓</span> 韓式 Pantone 打燈造型</li><li><span class="check">✓</span> 25 張精修相片（電子檔）</li><li><span class="check">✓</span> 全部專屬色調相片（電子檔）</li></ul><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-outline">私訊預約</a></article>
         </div>
+      </div>
+
+      <div class="addon-panel fade-in">
+        <details class="addon-box">
+          <summary>彈性加購項目（按需要選擇）<span class="addon-icon" aria-hidden="true">+</span></summary>
+          <div class="addon-body">
+            <p class="addon-lead">套餐價已包含上表所有內容。以下項目按你需要自由選擇，唔揀就唔會收取。</p>
+            <ul class="addon-list">
+              <li><span>星期六日 / 公眾假期拍攝</span><span class="addon-price">+$500</span></li>
+              <li><span>額外精修相片</span><span class="addon-price">+$100/張</span></li>
+              <li><span>加拍攝人數（大人 / 小朋友 / 寵物）</span><span class="addon-price">+$300/位</span></li>
+              <li><span>上門拍攝（只限 Newborn 初生）</span><span class="addon-price">+$1,000</span></li>
+            </ul>
+            <p class="addon-foot">上門服務偏遠地區及離島另議，來回車費實報實銷。其他造型、服飾或升級選項，歡迎 IG DM 查詢。</p>
+          </div>
+        </details>
       </div>
 
       <div class="ratecard-note fade-in">
