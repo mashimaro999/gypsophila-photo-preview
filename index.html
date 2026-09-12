@@ -17,13 +17,13 @@
   <meta name="description" content="Gypsophila Photography — 香港荃灣專業攝影工作室，深受香港孕婦媽媽和家庭喜愛。專注孕婦攝影（大肚相 / 孕婦寫真）、初生嬰兒攝影（BB相）、百日照及家庭全家福，提供 Studio 及上門拍攝、化妝造型，以自然有溫度的鏡頭紀錄珍貴時刻。" />
   <meta name="keywords" content="Gypsophila Photography, 滿天星攝影, 孕婦攝影, 大肚相, 孕婦寫真, 韓式孕婦相, 初生嬰兒攝影, BB相, 初生相, newborn, 百日照, 百日宴相, 周歲相, 抓周, Cake Smash, 家庭攝影, 全家福, 親子相, 荃灣攝影, 香港攝影師, 上門影BB, baby photography Hong Kong, maternity newborn family photography, 攝影價目表" />
   <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <link rel="canonical" href="https://www.gypphoto.com/" />
   <link rel="alternate" hreflang="zh-HK" href="https://www.gypphoto.com/" />
   <link rel="alternate" hreflang="en" href="https://www.gypphoto.com/en/" />
   <link rel="alternate" hreflang="x-default" href="https://www.gypphoto.com/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/fonts/great-vibes-latin.woff2" as="font" type="font/woff2" crossorigin />
 
   <meta property="og:title" content="Gypsophila Photography — 荃灣孕婦・初生・家庭攝影" />
   <meta property="og:description" content="以高級、優雅、有溫度的鏡頭，紀錄生命中最輕盈珍貴的瞬間。" />
@@ -59,7 +59,7 @@
     "@id": "https://www.gypphoto.com/#business",
     "name": "Gypsophila Photography",
     "alternateName": ["滿天星攝影", "Gypsophila Photo"],
-    "description": "Gypsophila Photography 是香港荃灣的專業攝影工作室，深受香港孕婦媽媽和家庭喜愛，專注孕婦攝影、初生嬰兒攝影、百日照及家庭攝影，提供 Studio 及上門拍攝、化妝造型與服飾租借。",
+    "description": "Gypsophila Photography 是香港荃灣的專業攝影工作室，深受香港孕婦媽媽和家庭喜愛，專注孕婦攝影、初生嬰兒攝影、百日照及家庭攝影，提供 Studio 及上門拍攝、化妝造型與服飾租借。影樓設山景及家居風兩種場景。",
     "url": "https://www.gypphoto.com/",
     "image": "https://www.gypphoto.com/images/og-image.jpg",
     "logo": "https://www.gypphoto.com/images/icon-512.png",
@@ -71,6 +71,10 @@
       "addressCountry": "HK"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 22.3736668, "longitude": 114.1061254 },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "山景影樓", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "家居風場景", "value": true }
+    ],
     "hasMap": "https://maps.app.goo.gl/mMHbEunoNjb9qh8G7",
     "areaServed": [
       { "@type": "City", "name": "荃灣 Tsuen Wan" },
@@ -79,56 +83,18 @@
     "knowsLanguage": ["zh-HK", "en"],
     "currenciesAccepted": "HKD",
     "priceRange": "$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "bestRating": "5",
-      "worstRating": "1",
-      "reviewCount": "21"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "author": { "@type": "Person", "name": "Gypsophila 客戶" },
-        "reviewBody": "影樓環境好舒服好乾淨，攝影師好細心，我同先生都好滿意啲相，希望再嚟影家庭相。"
-      },
-      {
-        "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "author": { "@type": "Person", "name": "Gypsophila 客戶" },
-        "reviewBody": "兩星期就收到相效率好高，攝影師專業又細心，化妝師妝感夠自然。"
-      },
-      {
-        "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "author": { "@type": "Person", "name": "Gypsophila 客戶" },
-        "reviewBody": "孕期增添美好回憶，體驗好舒服，化妝師同攝影師都好專業，唔使煩擺 pose，啱我哋呢啲怕鏡頭嘅人，一定推薦朋友。"
-      },
-      {
-        "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "author": { "@type": "Person", "name": "Gypsophila 客戶" },
-        "reviewBody": "攝影師好溫柔，不斷鼓勵同指導生硬嘅我哋擺 pose，效果比想像中好，衷心感謝留下美好回憶。"
-      },
-      {
-        "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "author": { "@type": "Person", "name": "Gypsophila 客戶" },
-        "reviewBody": "我同老公都好滿意，好多相唔使 retouch 都好靚，攝影師細心教擺 pose，化妝自然又靚。"
-      }
-    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "攝影服務 Packages",
       "itemListElement": [
-        { "@type": "Offer", "priceCurrency": "HKD", "price": "2800", "itemOffered": { "@type": "Service", "name": "孕婦攝影 Maternity Photography", "description": "香港孕婦寫真，提供自然風及黑白／韓式風格，包化妝造型及孕婦服飾租借。" } },
-        { "@type": "Offer", "priceCurrency": "HKD", "price": "3800", "itemOffered": { "@type": "Service", "name": "初生嬰兒攝影 Newborn Photography", "description": "初生 BB 攝影，建議出生後 7-14 日拍攝，提供上門或工作室。" } },
-        { "@type": "Offer", "priceCurrency": "HKD", "price": "3800", "itemOffered": { "@type": "Service", "name": "百日照攝影 100 Days Baby Photography", "description": "BB 百日紀念寫真，多款造型場景。" } },
-        { "@type": "Offer", "priceCurrency": "HKD", "price": "2800", "itemOffered": { "@type": "Service", "name": "家庭攝影 Family Photography", "description": "全家福、親子及大家族合照，最多可容納約 20 人。" } }
+        { "@type": "Offer", "priceCurrency": "HKD", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "HKD", "minPrice": "2800", "maxPrice": "5800" }, "itemOffered": { "@type": "Service", "name": "孕婦攝影 Maternity Photography", "description": "香港孕婦寫真，提供自然風及黑白／韓式風格，包化妝造型及孕婦服飾租借。" } },
+        { "@type": "Offer", "priceCurrency": "HKD", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "HKD", "minPrice": "3800", "maxPrice": "5800" }, "itemOffered": { "@type": "Service", "name": "初生嬰兒攝影 Newborn Photography", "description": "初生 BB 攝影，建議出生後 7-14 日拍攝，提供上門或工作室。" } },
+        { "@type": "Offer", "priceCurrency": "HKD", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "HKD", "minPrice": "3800", "maxPrice": "5800" }, "itemOffered": { "@type": "Service", "name": "百日照攝影 100 Days Baby Photography", "description": "BB 百日紀念寫真，多款造型場景。" } },
+        { "@type": "Offer", "priceCurrency": "HKD", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "HKD", "minPrice": "2800", "maxPrice": "5800" }, "itemOffered": { "@type": "Service", "name": "家庭攝影 Family Photography", "description": "全家福、親子及大家族合照，最多可容納約 20 人。" } }
       ]
     },
     "sameAs": [
+      "https://maps.app.goo.gl/mMHbEunoNjb9qh8G7",
       "https://www.instagram.com/gypsophila_photo",
       "https://www.instagram.com/BABYG.PHOTO",
       "https://www.instagram.com/FAMILYG.PHOTO"
@@ -142,13 +108,13 @@
     "mainEntity": [
       { "@type": "Question", "name": "攝影預約流程係點？", "acceptedAnswer": { "@type": "Answer", "text": "選擇 Package → 選擇拍攝日期和時間 → 落訂確認。" } },
       { "@type": "Question", "name": "孕婦幾多週拍攝最理想？", "acceptedAnswer": { "@type": "Answer", "text": "建議 28-32 週拍攝，因為 36 週後肚子急速增大，部分媽媽亦會出現水腫、腰背疼痛等情況。" } },
-      { "@type": "Question", "name": "孕婦攝影有冇化妝服務？", "acceptedAnswer": { "@type": "Answer", "text": "Package 已經包咗化妝及髮型造型服務。" } },
+      { "@type": "Question", "name": "孕婦攝影有冇化妝服務？", "acceptedAnswer": { "@type": "Answer", "text": "所有孕婦拍攝套餐已經包咗化妝及髮型造型服務。" } },
       { "@type": "Question", "name": "孕婦攝影衣服要準備嗎？", "acceptedAnswer": { "@type": "Answer", "text": "我哋有多款衣服提供畀孕婦媽媽配搭選擇，爸爸衣服需自備。" } },
       { "@type": "Question", "name": "拍攝需要準備道具嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以準備 BB 超聲波相、衫仔鞋仔、自製相簿或對你哋有紀念價值嘅小道具，令輯相更加獨一無二。" } },
-      { "@type": "Question", "name": "可以帶毛孩一起拍攝嗎？", "acceptedAnswer": { "@type": "Answer", "text": "毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。" } },
+      { "@type": "Question", "name": "可以帶毛孩一起拍攝嗎？", "acceptedAnswer": { "@type": "Answer", "text": "毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。加人（包括毛孩）每位 $300。" } },
       { "@type": "Question", "name": "如果拍攝當日天氣惡劣可以改期嗎？", "acceptedAnswer": { "@type": "Answer", "text": "黑雨 / 8 號風球或以上，可安排免費改期一次。如需改期，請於化妝時間前最少兩小時通知我哋。" } },
       { "@type": "Question", "name": "初生BB幾時拍攝最好？", "acceptedAnswer": { "@type": "Answer", "text": "建議最佳拍攝期為出生後 7-14 日，因為呢個階段 BB 嘅關節同肌肉仲係好柔軟，另外大部分時間處於深度睡眠，更容易配合拍攝。" } },
-      { "@type": "Question", "name": "有沒有上門攝影服務？", "acceptedAnswer": { "@type": "Answer", "text": "我哋有提供上門服務或可以嚟我哋 Studio（荃灣 TML Tower）。部分大型造型道具只限 Studio 拍攝。" } },
+      { "@type": "Question", "name": "有沒有上門攝影服務？", "acceptedAnswer": { "@type": "Answer", "text": "初生嬰兒拍攝可選上門服務（+$1,000），或嚟我哋 Studio（荃灣 TML Tower）；其他服務均於 Studio 拍攝。部分大型造型道具只限 Studio 拍攝。" } },
       { "@type": "Question", "name": "Studio 可以最多容納幾多人拍攝？", "acceptedAnswer": { "@type": "Answer", "text": "大約 20 人左右都可以，適合大家族全家福。" } },
       { "@type": "Question", "name": "你哋影樓喺邊度？係咪荃灣？", "acceptedAnswer": { "@type": "Answer", "text": "我哋 Studio 位於荃灣 TML Tower，交通方便，大廈內設有停車場。" } },
       { "@type": "Question", "name": "有冇韓式大肚相（孕婦寫真）？", "acceptedAnswer": { "@type": "Answer", "text": "有，孕婦攝影（大肚相 / 孕婦寫真）提供自然風、黑白風及韓式風格，可按喜好配搭。" } },
@@ -159,6 +125,14 @@
   </script>
 
   <style>
+    @font-face {
+      font-family: 'Great Vibes';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/great-vibes-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
     :root {
       --bg:      oklch(97.3% 0.012 165);
       --surface: oklch(100% 0 0);
@@ -267,13 +241,25 @@
     .nav-links a:hover, .nav-links a.active { color: var(--fg); background: var(--accent-light); }
     .nav-links .nav-lang a { border: 1px solid var(--border); font-weight: 700; letter-spacing: 0.06em; }
     .nav-links .nav-lang a:hover { border-color: var(--accent); }
+    .nav-lang-mobile { display: none; }
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--fg); }
     .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--fg); margin: 5px 0; border-radius: 2px; transition: var(--transition); }
     @media (max-width: 768px) {
       .nav-inner { padding: 0 24px; position: relative; }
       .nav-logo {
         font-size: 20px;
-        max-width: calc(100% - 52px);
+        max-width: calc(100% - 116px);
+      }
+      .nav-lang-mobile {
+        display: inline-block;
+        margin-left: auto; margin-right: 10px;
+        padding: 10px 14px; border: 1px solid var(--border); border-radius: 999px;
+        font-size: 14px; font-weight: 700; letter-spacing: 0.06em;
+        color: var(--muted); text-decoration: none; white-space: nowrap;
+        transition: all var(--transition);
+      }
+      .nav-lang-mobile:hover, .nav-lang-mobile:focus-visible {
+        border-color: var(--accent); color: var(--fg); background: var(--accent-light);
       }
       .nav-toggle {
         display: block;
@@ -865,6 +851,7 @@
       <div class="nav-logo">
         <a href="#hero">Gypsophila Photography</a>
       </div>
+      <a class="nav-lang-mobile" href="/en/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
       <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -884,7 +871,7 @@
   <section class="hero" id="hero" aria-labelledby="hero-heading">
     <div class="hero-content">
       <h1 id="hero-heading">
-        <img class="hero-logo" src="images/gypsophila-logo-white.png?v=1" alt="Gypsophila Photography" width="1024" height="484" />
+        <img class="hero-logo" src="images/gypsophila-logo-white.webp" alt="Gypsophila Photography" width="1024" height="484" fetchpriority="high" decoding="async" />
         <span class="sr-only">Gypsophila Photography — 香港荃灣專業攝影工作室，提供孕婦攝影、初生嬰兒攝影、百日照及家庭攝影</span>
       </h1>
       <p class="hero-tagline">Where Moments Bloom</p>
@@ -898,7 +885,7 @@
       <ul class="hero-trust">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>IG 逾萬人追蹤</li>
         <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.1 6.7.9-4.9 4.6 1.2 6.6L12 18.6 6.1 20.2l1.2-6.6L2.4 9l6.7-.9z"/></svg>真實客戶好評</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>荃灣 Studio・交通方便</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>荃灣山景影樓・家居風場景</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>孕婦・初生・百日・家庭一站式</li>
       </ul>
     </div>
@@ -913,6 +900,7 @@
           <h2 id="about-heading">Our Story</h2>
           <p><span class="about-brand-en">Gypsophila</span> —— 滿天星，花語係「純淨、真摯、永恆嘅愛」。我哋深信，最值得留住嘅畫面，從來唔係完美嘅擺拍，而係最真實、最打動人嘅那一刻。</p>
           <p>主品牌 <a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener" class="about-ig-link">GYPSOPHILA_PHOTO</a> 涵蓋各類人像攝影，旗下 <a href="https://www.instagram.com/BABYG.PHOTO" target="_blank" rel="noopener" class="about-ig-link">BABYG.PHOTO</a> 專注嬰兒攝影，<a href="https://www.instagram.com/FAMILYG.PHOTO" target="_blank" rel="noopener" class="about-ig-link">FAMILYG.PHOTO</a> 紀錄家庭嘅溫暖時刻。我們相信，最好的照片不需要過度修飾——真實、自然、有溫度，就是最美的畫面。</p>
+          <p><strong>兩種場景・一個影樓</strong><br />我哋荃灣影樓坐擁翠綠山景，落地玻璃自然採光。另外我哋有自家設計嘅家居風場景，影出嚟有 Home Feel Style，自然唔做作。</p>
         </div>
         <div class="about-visual fade-in">
           <div class="about-collage" role="img" aria-label="Gypsophila Photography 作品：孕婦照、初生照、家庭照">
@@ -975,64 +963,64 @@
       </div>
       <div class="portfolio-grid" id="portfolioGrid">
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/08.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/08.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/01.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/01.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/05.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/05.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/06.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/06.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/03.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/03.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/10.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/10.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/02.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/02.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/07.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/07.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/09.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/09.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/04.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/04.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/natural/11.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/natural/11.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/12.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/12.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/13.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/13.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/natural/14.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/natural/14.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/15.jpg" alt="孕婦照 · 自然風" loading="lazy" />
-          <div class="hover-caption"><span>自然風</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/15.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
           <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/09.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
@@ -1227,76 +1215,76 @@
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/14.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/14.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/15.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/15.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/16.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/16.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/11.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/11.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/17.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/17.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/18.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/18.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/01.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/01.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/02.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/02.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/03.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/03.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/04.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/04.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/05.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/05.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/06.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/06.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/07.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/07.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/08.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/08.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/09.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/09.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/10.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/10.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/12.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/12.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/13.jpg" alt="家庭照" loading="lazy" />
-          <div class="hover-caption"><span>家庭照</span></div>
+          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/13.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <div class="hover-caption"><span>家居風</span></div>
         </div>
       </div>
     </div>
@@ -1489,10 +1477,10 @@
       <div class="faq-list fade-in">
         <details class="faq-item" data-cat="maternity" open><summary>預約流程係點？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">選擇 Package → 選擇拍攝日期和時間 → 落訂確認</div></details>
         <details class="faq-item" data-cat="maternity"><summary>幾多週拍攝最理想？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">建議 <strong>28-32 週</strong>拍攝，因為 36 週後肚子急速增大，部分媽媽亦會出現水腫、腰背疼痛等情況。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>有冇化妝服務？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">Package 已經包咗化妝及髮型造型服務。</div></details>
+        <details class="faq-item" data-cat="maternity"><summary>有冇化妝服務？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">所有孕婦拍攝套餐已經包咗化妝及髮型造型服務。</div></details>
         <details class="faq-item" data-cat="maternity"><summary>衣服要準備嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋有多款衣服提供畀孕婦媽媽配搭選擇，爸爸衣服需自備。</div></details>
         <details class="faq-item" data-cat="maternity"><summary>需要準備道具嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">可以準備 BB 超聲波相、衫仔鞋仔、自製相簿或對你哋有紀念價值嘅小道具，令輯相更加獨一無二。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>可以帶毛孩一起拍攝嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。</div></details>
+        <details class="faq-item" data-cat="maternity"><summary>可以帶毛孩一起拍攝嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。加人（包括毛孩）每位 $300。</div></details>
         <details class="faq-item" data-cat="maternity"><summary>如果拍攝當日天氣惡劣？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">黑雨 / 8 號風球或以上，可安排<strong>免費改期一次</strong>。如需改期，請於化妝時間前最少兩小時通知我哋。</div></details>
         <details class="faq-item" data-cat="maternity"><summary>你哋影樓喺邊度？係咪荃灣？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋 Studio 位於<strong>荃灣 TML Tower</strong>，交通方便，大廈內設有停車場。</div></details>
         <details class="faq-item" data-cat="maternity"><summary>有冇韓式大肚相？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">有，孕婦攝影（大肚相 / 孕婦寫真）提供自然風、黑白風及韓式風格，可按你喜好配搭。</div></details>
@@ -1506,7 +1494,7 @@
         <details class="faq-item" data-cat="newborn"><summary>有冇百日宴相、周歲抓周或 Cake Smash？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">有，BABYG 提供百日照（百日宴相）、一歲生日照、周歲抓周及 Cake Smash 拍攝，紀錄 BB 每個成長里程碑。</div></details>
 
         <details class="faq-item" data-cat="family"><summary>Studio 可以最多容納幾多人拍攝？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">大約 <strong>20 人</strong>左右都可以。家庭套餐包 <strong>10 人內</strong>，額外每位 $300。</div></details>
-        <details class="faq-item" data-cat="family"><summary>可以帶毛孩一起拍攝嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。加人（包括毛孩）每位 $300。</div></details>
+        <details class="faq-item" data-cat="family"><summary>全家福可以帶毛孩一齊影嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。加人（包括毛孩）每位 $300。</div></details>
         <details class="faq-item" data-cat="family"><summary>荃灣有冇影全家福 / 親子相？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">有，我哋荃灣 Studio 提供家庭攝影（全家福 / 親子相 / 三代同堂）。</div></details>
       </div>
     </div>
