@@ -328,6 +328,7 @@
     .hero::before {
       content: ''; position: absolute; inset: 0; z-index: 0;
       background-image: url('images/Portfolio/maternity/natural/01.jpg');
+      background-image: image-set(url('images/Portfolio/maternity/natural/01.avif') type('image/avif'), url('images/Portfolio/maternity/natural/01.jpg') type('image/jpeg'));
       background-size: cover; background-position: center 28%;
       transform: scale(1.02);
     }
@@ -453,14 +454,16 @@
       width: 100%;
       height: 100%;
     }
+    picture { display: contents; }
+    picture > source { display: none; }
     .about-collage img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    .about-collage img:first-child { grid-row: span 2; object-position: 28% center; }
-    .about-collage img:nth-child(2) { object-position: 28% center; }
+    .about-collage picture:first-child img { grid-row: span 2; object-position: 28% center; }
+    .about-collage picture:nth-child(2) img { object-position: 28% center; }
     @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } .about-visual { aspect-ratio: 3 / 2; order: -1; } }
 
     /* SERVICES */
@@ -905,9 +908,9 @@
         </div>
         <div class="about-visual fade-in">
           <div class="about-collage" role="img" aria-label="Gypsophila Photography 作品：孕婦照、初生照、家庭照">
-            <img width="1067" height="1600" src="images/Portfolio/孕婦攝影/自然風/VL204492.jpg" alt="孕婦攝影" loading="lazy" />
-            <img width="1600" height="1067" src="images/Portfolio/newborn/01.jpg" alt="初生嬰兒攝影" loading="lazy" />
-            <img width="1600" height="1067" src="images/Portfolio/家庭攝影/VL208830.jpg" alt="家庭攝影" loading="lazy" />
+            <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/08-480.avif 480w, images/Portfolio/maternity/natural/08-800.avif 800w, images/Portfolio/maternity/natural/08.avif 1067w" sizes="(max-width: 768px) 50vw, 400px" /><img width="1067" height="1600" src="images/Portfolio/maternity/natural/08.jpg" alt="孕婦攝影" loading="lazy" srcset="images/Portfolio/maternity/natural/08-480.jpg 480w, images/Portfolio/maternity/natural/08-800.jpg 800w, images/Portfolio/maternity/natural/08.jpg 1067w" sizes="(max-width: 768px) 50vw, 400px" /></picture>
+            <picture><source type="image/avif" srcset="images/Portfolio/newborn/01-480.avif 480w, images/Portfolio/newborn/01-800.avif 800w, images/Portfolio/newborn/01-1200.avif 1200w, images/Portfolio/newborn/01.avif 1600w" sizes="(max-width: 768px) 50vw, 400px" /><img width="1600" height="1067" src="images/Portfolio/newborn/01.jpg" alt="初生嬰兒攝影" loading="lazy" srcset="images/Portfolio/newborn/01-480.jpg 480w, images/Portfolio/newborn/01-800.jpg 800w, images/Portfolio/newborn/01-1200.jpg 1200w, images/Portfolio/newborn/01.jpg 1600w" sizes="(max-width: 768px) 50vw, 400px" /></picture>
+            <picture><source type="image/avif" srcset="images/Portfolio/family/15-480.avif 480w, images/Portfolio/family/15-800.avif 800w, images/Portfolio/family/15-1200.avif 1200w, images/Portfolio/family/15.avif 1600w" sizes="(max-width: 768px) 50vw, 400px" /><img width="1600" height="1067" src="images/Portfolio/family/15.jpg" alt="家庭攝影" loading="lazy" srcset="images/Portfolio/family/15-480.jpg 480w, images/Portfolio/family/15-800.jpg 800w, images/Portfolio/family/15-1200.jpg 1200w, images/Portfolio/family/15.jpg 1600w" sizes="(max-width: 768px) 50vw, 400px" /></picture>
           </div>
         </div>
       </div>
@@ -964,327 +967,327 @@
       </div>
       <div class="portfolio-grid" id="portfolioGrid">
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/08.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/08-480.avif 480w, images/Portfolio/maternity/natural/08-800.avif 800w, images/Portfolio/maternity/natural/08.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/08.jpg" alt="孕婦照 · 山景影樓" loading="lazy" srcset="images/Portfolio/maternity/natural/08-480.jpg 480w, images/Portfolio/maternity/natural/08-800.jpg 800w, images/Portfolio/maternity/natural/08.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/01.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/01-480.avif 480w, images/Portfolio/maternity/natural/01-800.avif 800w, images/Portfolio/maternity/natural/01.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/01.jpg" alt="孕婦照 · 山景影樓" loading="lazy" srcset="images/Portfolio/maternity/natural/01-480.jpg 480w, images/Portfolio/maternity/natural/01-800.jpg 800w, images/Portfolio/maternity/natural/01.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/05.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/05-480.avif 480w, images/Portfolio/maternity/natural/05-800.avif 800w, images/Portfolio/maternity/natural/05.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/05.jpg" alt="孕婦照 · 山景影樓" loading="lazy" srcset="images/Portfolio/maternity/natural/05-480.jpg 480w, images/Portfolio/maternity/natural/05-800.jpg 800w, images/Portfolio/maternity/natural/05.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/06.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/06-480.avif 480w, images/Portfolio/maternity/natural/06-800.avif 800w, images/Portfolio/maternity/natural/06.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/06.jpg" alt="孕婦照 · 家居風場景" loading="lazy" srcset="images/Portfolio/maternity/natural/06-480.jpg 480w, images/Portfolio/maternity/natural/06-800.jpg 800w, images/Portfolio/maternity/natural/06.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/03.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/03-480.avif 480w, images/Portfolio/maternity/natural/03-800.avif 800w, images/Portfolio/maternity/natural/03.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/03.jpg" alt="孕婦照 · 山景影樓" loading="lazy" srcset="images/Portfolio/maternity/natural/03-480.jpg 480w, images/Portfolio/maternity/natural/03-800.jpg 800w, images/Portfolio/maternity/natural/03.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/10.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/10-480.avif 480w, images/Portfolio/maternity/natural/10-800.avif 800w, images/Portfolio/maternity/natural/10.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/10.jpg" alt="孕婦照 · 家居風場景" loading="lazy" srcset="images/Portfolio/maternity/natural/10-480.jpg 480w, images/Portfolio/maternity/natural/10-800.jpg 800w, images/Portfolio/maternity/natural/10.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/02.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/02-480.avif 480w, images/Portfolio/maternity/natural/02-800.avif 800w, images/Portfolio/maternity/natural/02.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/02.jpg" alt="孕婦照 · 家居風場景" loading="lazy" srcset="images/Portfolio/maternity/natural/02-480.jpg 480w, images/Portfolio/maternity/natural/02-800.jpg 800w, images/Portfolio/maternity/natural/02.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/07.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/07-480.avif 480w, images/Portfolio/maternity/natural/07-800.avif 800w, images/Portfolio/maternity/natural/07.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/07.jpg" alt="孕婦照 · 山景影樓" loading="lazy" srcset="images/Portfolio/maternity/natural/07-480.jpg 480w, images/Portfolio/maternity/natural/07-800.jpg 800w, images/Portfolio/maternity/natural/07.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/09.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/09-480.avif 480w, images/Portfolio/maternity/natural/09-800.avif 800w, images/Portfolio/maternity/natural/09.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/09.jpg" alt="孕婦照 · 山景影樓" loading="lazy" srcset="images/Portfolio/maternity/natural/09-480.jpg 480w, images/Portfolio/maternity/natural/09-800.jpg 800w, images/Portfolio/maternity/natural/09.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/04.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/04-480.avif 480w, images/Portfolio/maternity/natural/04-800.avif 800w, images/Portfolio/maternity/natural/04.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/04.jpg" alt="孕婦照 · 家居風場景" loading="lazy" srcset="images/Portfolio/maternity/natural/04-480.jpg 480w, images/Portfolio/maternity/natural/04-800.jpg 800w, images/Portfolio/maternity/natural/04.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/natural/11.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/11-480.avif 480w, images/Portfolio/maternity/natural/11-800.avif 800w, images/Portfolio/maternity/natural/11-1200.avif 1200w, images/Portfolio/maternity/natural/11.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/natural/11.jpg" alt="孕婦照 · 家居風場景" loading="lazy" srcset="images/Portfolio/maternity/natural/11-480.jpg 480w, images/Portfolio/maternity/natural/11-800.jpg 800w, images/Portfolio/maternity/natural/11-1200.jpg 1200w, images/Portfolio/maternity/natural/11.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/12.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/12-480.avif 480w, images/Portfolio/maternity/natural/12-800.avif 800w, images/Portfolio/maternity/natural/12.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/12.jpg" alt="孕婦照 · 家居風場景" loading="lazy" srcset="images/Portfolio/maternity/natural/12-480.jpg 480w, images/Portfolio/maternity/natural/12-800.jpg 800w, images/Portfolio/maternity/natural/12.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/13.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/13-480.avif 480w, images/Portfolio/maternity/natural/13-800.avif 800w, images/Portfolio/maternity/natural/13.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/13.jpg" alt="孕婦照 · 山景影樓" loading="lazy" srcset="images/Portfolio/maternity/natural/13-480.jpg 480w, images/Portfolio/maternity/natural/13-800.jpg 800w, images/Portfolio/maternity/natural/13.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/natural/14.jpg" alt="孕婦照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/14-480.avif 480w, images/Portfolio/maternity/natural/14-800.avif 800w, images/Portfolio/maternity/natural/14-1200.avif 1200w, images/Portfolio/maternity/natural/14.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/natural/14.jpg" alt="孕婦照 · 山景影樓" loading="lazy" srcset="images/Portfolio/maternity/natural/14-480.jpg 480w, images/Portfolio/maternity/natural/14-800.jpg 800w, images/Portfolio/maternity/natural/14-1200.jpg 1200w, images/Portfolio/maternity/natural/14.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="natural">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/15.jpg" alt="孕婦照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/natural/15-480.avif 480w, images/Portfolio/maternity/natural/15-800.avif 800w, images/Portfolio/maternity/natural/15.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/natural/15.jpg" alt="孕婦照 · 家居風場景" loading="lazy" srcset="images/Portfolio/maternity/natural/15-480.jpg 480w, images/Portfolio/maternity/natural/15-800.jpg 800w, images/Portfolio/maternity/natural/15.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/09.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/09-480.avif 480w, images/Portfolio/maternity/bw/09-800.avif 800w, images/Portfolio/maternity/bw/09.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/09.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/09-480.jpg 480w, images/Portfolio/maternity/bw/09-800.jpg 800w, images/Portfolio/maternity/bw/09.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/01.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/01-480.avif 480w, images/Portfolio/maternity/bw/01-800.avif 800w, images/Portfolio/maternity/bw/01.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/01.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/01-480.jpg 480w, images/Portfolio/maternity/bw/01-800.jpg 800w, images/Portfolio/maternity/bw/01.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/12.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/12-480.avif 480w, images/Portfolio/maternity/bw/12-800.avif 800w, images/Portfolio/maternity/bw/12.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/12.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/12-480.jpg 480w, images/Portfolio/maternity/bw/12-800.jpg 800w, images/Portfolio/maternity/bw/12.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/03.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/03-480.avif 480w, images/Portfolio/maternity/bw/03-800.avif 800w, images/Portfolio/maternity/bw/03.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/03.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/03-480.jpg 480w, images/Portfolio/maternity/bw/03-800.jpg 800w, images/Portfolio/maternity/bw/03.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/13.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/13-480.avif 480w, images/Portfolio/maternity/bw/13-800.avif 800w, images/Portfolio/maternity/bw/13.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/13.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/13-480.jpg 480w, images/Portfolio/maternity/bw/13-800.jpg 800w, images/Portfolio/maternity/bw/13.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/10.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/10-480.avif 480w, images/Portfolio/maternity/bw/10-800.avif 800w, images/Portfolio/maternity/bw/10.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/10.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/10-480.jpg 480w, images/Portfolio/maternity/bw/10-800.jpg 800w, images/Portfolio/maternity/bw/10.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/04.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/04-480.avif 480w, images/Portfolio/maternity/bw/04-800.avif 800w, images/Portfolio/maternity/bw/04.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/04.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/04-480.jpg 480w, images/Portfolio/maternity/bw/04-800.jpg 800w, images/Portfolio/maternity/bw/04.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/05.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/05-480.avif 480w, images/Portfolio/maternity/bw/05-800.avif 800w, images/Portfolio/maternity/bw/05.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/05.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/05-480.jpg 480w, images/Portfolio/maternity/bw/05-800.jpg 800w, images/Portfolio/maternity/bw/05.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/06.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/06-480.avif 480w, images/Portfolio/maternity/bw/06-800.avif 800w, images/Portfolio/maternity/bw/06.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/06.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/06-480.jpg 480w, images/Portfolio/maternity/bw/06-800.jpg 800w, images/Portfolio/maternity/bw/06.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/07.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/07-480.avif 480w, images/Portfolio/maternity/bw/07-800.avif 800w, images/Portfolio/maternity/bw/07.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/07.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/07-480.jpg 480w, images/Portfolio/maternity/bw/07-800.jpg 800w, images/Portfolio/maternity/bw/07.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/02.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/02-480.avif 480w, images/Portfolio/maternity/bw/02-800.avif 800w, images/Portfolio/maternity/bw/02.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/02.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/02-480.jpg 480w, images/Portfolio/maternity/bw/02-800.jpg 800w, images/Portfolio/maternity/bw/02.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/11.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/11-480.avif 480w, images/Portfolio/maternity/bw/11-800.avif 800w, images/Portfolio/maternity/bw/11.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/11.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/11-480.jpg 480w, images/Portfolio/maternity/bw/11-800.jpg 800w, images/Portfolio/maternity/bw/11.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/08.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/08-480.avif 480w, images/Portfolio/maternity/bw/08-800.avif 800w, images/Portfolio/maternity/bw/08.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/08.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/08-480.jpg 480w, images/Portfolio/maternity/bw/08-800.jpg 800w, images/Portfolio/maternity/bw/08.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/14.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/14-480.avif 480w, images/Portfolio/maternity/bw/14-800.avif 800w, images/Portfolio/maternity/bw/14.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/maternity/bw/14.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/14-480.jpg 480w, images/Portfolio/maternity/bw/14-800.jpg 800w, images/Portfolio/maternity/bw/14.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="maternity" data-subcategory="bw">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/bw/15.jpg" alt="孕婦照 · 黑白風" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/maternity/bw/15-480.avif 480w, images/Portfolio/maternity/bw/15-800.avif 800w, images/Portfolio/maternity/bw/15-1200.avif 1200w, images/Portfolio/maternity/bw/15.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/maternity/bw/15.jpg" alt="孕婦照 · 黑白風" loading="lazy" srcset="images/Portfolio/maternity/bw/15-480.jpg 480w, images/Portfolio/maternity/bw/15-800.jpg 800w, images/Portfolio/maternity/bw/15-1200.jpg 1200w, images/Portfolio/maternity/bw/15.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>黑白風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/01.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/01-480.avif 480w, images/Portfolio/newborn/01-800.avif 800w, images/Portfolio/newborn/01-1200.avif 1200w, images/Portfolio/newborn/01.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/01.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/01-480.jpg 480w, images/Portfolio/newborn/01-800.jpg 800w, images/Portfolio/newborn/01-1200.jpg 1200w, images/Portfolio/newborn/01.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/02.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/02-480.avif 480w, images/Portfolio/newborn/02-800.avif 800w, images/Portfolio/newborn/02-1200.avif 1200w, images/Portfolio/newborn/02.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/02.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/02-480.jpg 480w, images/Portfolio/newborn/02-800.jpg 800w, images/Portfolio/newborn/02-1200.jpg 1200w, images/Portfolio/newborn/02.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/03.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/03-480.avif 480w, images/Portfolio/newborn/03-800.avif 800w, images/Portfolio/newborn/03-1200.avif 1200w, images/Portfolio/newborn/03.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/03.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/03-480.jpg 480w, images/Portfolio/newborn/03-800.jpg 800w, images/Portfolio/newborn/03-1200.jpg 1200w, images/Portfolio/newborn/03.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/04.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/04-480.avif 480w, images/Portfolio/newborn/04-800.avif 800w, images/Portfolio/newborn/04.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/04.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/04-480.jpg 480w, images/Portfolio/newborn/04-800.jpg 800w, images/Portfolio/newborn/04.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/05.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/05-480.avif 480w, images/Portfolio/newborn/05-800.avif 800w, images/Portfolio/newborn/05-1200.avif 1200w, images/Portfolio/newborn/05.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/05.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/05-480.jpg 480w, images/Portfolio/newborn/05-800.jpg 800w, images/Portfolio/newborn/05-1200.jpg 1200w, images/Portfolio/newborn/05.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/06.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/06-480.avif 480w, images/Portfolio/newborn/06-800.avif 800w, images/Portfolio/newborn/06-1200.avif 1200w, images/Portfolio/newborn/06.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/06.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/06-480.jpg 480w, images/Portfolio/newborn/06-800.jpg 800w, images/Portfolio/newborn/06-1200.jpg 1200w, images/Portfolio/newborn/06.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/07.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/07-480.avif 480w, images/Portfolio/newborn/07-800.avif 800w, images/Portfolio/newborn/07.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/07.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/07-480.jpg 480w, images/Portfolio/newborn/07-800.jpg 800w, images/Portfolio/newborn/07.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/09.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/09-480.avif 480w, images/Portfolio/newborn/09-800.avif 800w, images/Portfolio/newborn/09-1200.avif 1200w, images/Portfolio/newborn/09.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/09.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/09-480.jpg 480w, images/Portfolio/newborn/09-800.jpg 800w, images/Portfolio/newborn/09-1200.jpg 1200w, images/Portfolio/newborn/09.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/08.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/08-480.avif 480w, images/Portfolio/newborn/08-800.avif 800w, images/Portfolio/newborn/08.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/08.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/08-480.jpg 480w, images/Portfolio/newborn/08-800.jpg 800w, images/Portfolio/newborn/08.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1066" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/10.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/10-480.avif 480w, images/Portfolio/newborn/10-800.avif 800w, images/Portfolio/newborn/10.avif 1066w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1066" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/10.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/10-480.jpg 480w, images/Portfolio/newborn/10-800.jpg 800w, images/Portfolio/newborn/10.jpg 1066w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/11.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/11-480.avif 480w, images/Portfolio/newborn/11-800.avif 800w, images/Portfolio/newborn/11-1200.avif 1200w, images/Portfolio/newborn/11.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/11.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/11-480.jpg 480w, images/Portfolio/newborn/11-800.jpg 800w, images/Portfolio/newborn/11-1200.jpg 1200w, images/Portfolio/newborn/11.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/12.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/12-480.avif 480w, images/Portfolio/newborn/12-800.avif 800w, images/Portfolio/newborn/12-1200.avif 1200w, images/Portfolio/newborn/12.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/12.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/12-480.jpg 480w, images/Portfolio/newborn/12-800.jpg 800w, images/Portfolio/newborn/12-1200.jpg 1200w, images/Portfolio/newborn/12.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/13.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/13-480.avif 480w, images/Portfolio/newborn/13-800.avif 800w, images/Portfolio/newborn/13-1200.avif 1200w, images/Portfolio/newborn/13.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/13.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/13-480.jpg 480w, images/Portfolio/newborn/13-800.jpg 800w, images/Portfolio/newborn/13-1200.jpg 1200w, images/Portfolio/newborn/13.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/14.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/14-480.avif 480w, images/Portfolio/newborn/14-800.avif 800w, images/Portfolio/newborn/14-1200.avif 1200w, images/Portfolio/newborn/14.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/14.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/14-480.jpg 480w, images/Portfolio/newborn/14-800.jpg 800w, images/Portfolio/newborn/14-1200.jpg 1200w, images/Portfolio/newborn/14.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/15.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/15-480.avif 480w, images/Portfolio/newborn/15-800.avif 800w, images/Portfolio/newborn/15.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/15.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/15-480.jpg 480w, images/Portfolio/newborn/15-800.jpg 800w, images/Portfolio/newborn/15.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/16.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/16-480.avif 480w, images/Portfolio/newborn/16-800.avif 800w, images/Portfolio/newborn/16-1200.avif 1200w, images/Portfolio/newborn/16.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/16.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/16-480.jpg 480w, images/Portfolio/newborn/16-800.jpg 800w, images/Portfolio/newborn/16-1200.jpg 1200w, images/Portfolio/newborn/16.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/17.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/17-480.avif 480w, images/Portfolio/newborn/17-800.avif 800w, images/Portfolio/newborn/17-1200.avif 1200w, images/Portfolio/newborn/17.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/17.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/17-480.jpg 480w, images/Portfolio/newborn/17-800.jpg 800w, images/Portfolio/newborn/17-1200.jpg 1200w, images/Portfolio/newborn/17.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/18.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/18-480.avif 480w, images/Portfolio/newborn/18-800.avif 800w, images/Portfolio/newborn/18.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/18.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/18-480.jpg 480w, images/Portfolio/newborn/18-800.jpg 800w, images/Portfolio/newborn/18.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/19.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/19-480.avif 480w, images/Portfolio/newborn/19-800.avif 800w, images/Portfolio/newborn/19.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/newborn/19.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/19-480.jpg 480w, images/Portfolio/newborn/19-800.jpg 800w, images/Portfolio/newborn/19.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="newborn">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/20.jpg" alt="初生照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/newborn/20-480.avif 480w, images/Portfolio/newborn/20-800.avif 800w, images/Portfolio/newborn/20-1200.avif 1200w, images/Portfolio/newborn/20.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/newborn/20.jpg" alt="初生照" loading="lazy" srcset="images/Portfolio/newborn/20-480.jpg 480w, images/Portfolio/newborn/20-800.jpg 800w, images/Portfolio/newborn/20-1200.jpg 1200w, images/Portfolio/newborn/20.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>初生照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1200" height="1600" class="portfolio-photo" src="images/Portfolio/100days/01.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/01-480.avif 480w, images/Portfolio/100days/01-800.avif 800w, images/Portfolio/100days/01.avif 1200w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1200" height="1600" class="portfolio-photo" src="images/Portfolio/100days/01.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/01-480.jpg 480w, images/Portfolio/100days/01-800.jpg 800w, images/Portfolio/100days/01.jpg 1200w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/02.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/02-480.avif 480w, images/Portfolio/100days/02-800.avif 800w, images/Portfolio/100days/02.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/02.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/02-480.jpg 480w, images/Portfolio/100days/02-800.jpg 800w, images/Portfolio/100days/02.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/03.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/03-480.avif 480w, images/Portfolio/100days/03-800.avif 800w, images/Portfolio/100days/03-1200.avif 1200w, images/Portfolio/100days/03.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/03.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/03-480.jpg 480w, images/Portfolio/100days/03-800.jpg 800w, images/Portfolio/100days/03-1200.jpg 1200w, images/Portfolio/100days/03.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/04.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/04-480.avif 480w, images/Portfolio/100days/04-800.avif 800w, images/Portfolio/100days/04.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/04.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/04-480.jpg 480w, images/Portfolio/100days/04-800.jpg 800w, images/Portfolio/100days/04.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/05.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/05-480.avif 480w, images/Portfolio/100days/05-800.avif 800w, images/Portfolio/100days/05-1200.avif 1200w, images/Portfolio/100days/05.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/05.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/05-480.jpg 480w, images/Portfolio/100days/05-800.jpg 800w, images/Portfolio/100days/05-1200.jpg 1200w, images/Portfolio/100days/05.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/06.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/06-480.avif 480w, images/Portfolio/100days/06-800.avif 800w, images/Portfolio/100days/06-1200.avif 1200w, images/Portfolio/100days/06.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/06.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/06-480.jpg 480w, images/Portfolio/100days/06-800.jpg 800w, images/Portfolio/100days/06-1200.jpg 1200w, images/Portfolio/100days/06.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/07.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/07-480.avif 480w, images/Portfolio/100days/07-800.avif 800w, images/Portfolio/100days/07.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/07.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/07-480.jpg 480w, images/Portfolio/100days/07-800.jpg 800w, images/Portfolio/100days/07.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/08.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/08-480.avif 480w, images/Portfolio/100days/08-800.avif 800w, images/Portfolio/100days/08-1200.avif 1200w, images/Portfolio/100days/08.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/08.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/08-480.jpg 480w, images/Portfolio/100days/08-800.jpg 800w, images/Portfolio/100days/08-1200.jpg 1200w, images/Portfolio/100days/08.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/09.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/09-480.avif 480w, images/Portfolio/100days/09-800.avif 800w, images/Portfolio/100days/09.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/09.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/09-480.jpg 480w, images/Portfolio/100days/09-800.jpg 800w, images/Portfolio/100days/09.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/10.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/10-480.avif 480w, images/Portfolio/100days/10-800.avif 800w, images/Portfolio/100days/10.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/10.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/10-480.jpg 480w, images/Portfolio/100days/10-800.jpg 800w, images/Portfolio/100days/10.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/11.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/11-480.avif 480w, images/Portfolio/100days/11-800.avif 800w, images/Portfolio/100days/11.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/100days/11.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/11-480.jpg 480w, images/Portfolio/100days/11-800.jpg 800w, images/Portfolio/100days/11.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/12.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/12-480.avif 480w, images/Portfolio/100days/12-800.avif 800w, images/Portfolio/100days/12-1200.avif 1200w, images/Portfolio/100days/12.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/100days/12.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/12-480.jpg 480w, images/Portfolio/100days/12-800.jpg 800w, images/Portfolio/100days/12-1200.jpg 1200w, images/Portfolio/100days/12.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="100days">
-          <img width="1600" height="957" class="portfolio-photo" src="images/Portfolio/100days/13.jpg" alt="百日照" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/100days/13-480.avif 480w, images/Portfolio/100days/13-800.avif 800w, images/Portfolio/100days/13-1200.avif 1200w, images/Portfolio/100days/13.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="957" class="portfolio-photo" src="images/Portfolio/100days/13.jpg" alt="百日照" loading="lazy" srcset="images/Portfolio/100days/13-480.jpg 480w, images/Portfolio/100days/13-800.jpg 800w, images/Portfolio/100days/13-1200.jpg 1200w, images/Portfolio/100days/13.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>百日照</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/14.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/14-480.avif 480w, images/Portfolio/family/14-800.avif 800w, images/Portfolio/family/14-1200.avif 1200w, images/Portfolio/family/14.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/14.jpg" alt="家庭照 · 山景影樓" loading="lazy" srcset="images/Portfolio/family/14-480.jpg 480w, images/Portfolio/family/14-800.jpg 800w, images/Portfolio/family/14-1200.jpg 1200w, images/Portfolio/family/14.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/15.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/15-480.avif 480w, images/Portfolio/family/15-800.avif 800w, images/Portfolio/family/15-1200.avif 1200w, images/Portfolio/family/15.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/15.jpg" alt="家庭照 · 山景影樓" loading="lazy" srcset="images/Portfolio/family/15-480.jpg 480w, images/Portfolio/family/15-800.jpg 800w, images/Portfolio/family/15-1200.jpg 1200w, images/Portfolio/family/15.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/16.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/16-480.avif 480w, images/Portfolio/family/16-800.avif 800w, images/Portfolio/family/16-1200.avif 1200w, images/Portfolio/family/16.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/16.jpg" alt="家庭照 · 山景影樓" loading="lazy" srcset="images/Portfolio/family/16-480.jpg 480w, images/Portfolio/family/16-800.jpg 800w, images/Portfolio/family/16-1200.jpg 1200w, images/Portfolio/family/16.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/11.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/11-480.avif 480w, images/Portfolio/family/11-800.avif 800w, images/Portfolio/family/11-1200.avif 1200w, images/Portfolio/family/11.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/11.jpg" alt="家庭照 · 山景影樓" loading="lazy" srcset="images/Portfolio/family/11-480.jpg 480w, images/Portfolio/family/11-800.jpg 800w, images/Portfolio/family/11-1200.jpg 1200w, images/Portfolio/family/11.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/17.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/17-480.avif 480w, images/Portfolio/family/17-800.avif 800w, images/Portfolio/family/17-1200.avif 1200w, images/Portfolio/family/17.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/17.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/17-480.jpg 480w, images/Portfolio/family/17-800.jpg 800w, images/Portfolio/family/17-1200.jpg 1200w, images/Portfolio/family/17.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/18.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/18-480.avif 480w, images/Portfolio/family/18-800.avif 800w, images/Portfolio/family/18-1200.avif 1200w, images/Portfolio/family/18.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/18.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/18-480.jpg 480w, images/Portfolio/family/18-800.jpg 800w, images/Portfolio/family/18-1200.jpg 1200w, images/Portfolio/family/18.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/01.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/01-480.avif 480w, images/Portfolio/family/01-800.avif 800w, images/Portfolio/family/01.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/01.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/01-480.jpg 480w, images/Portfolio/family/01-800.jpg 800w, images/Portfolio/family/01.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/02.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/02-480.avif 480w, images/Portfolio/family/02-800.avif 800w, images/Portfolio/family/02-1200.avif 1200w, images/Portfolio/family/02.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/02.jpg" alt="家庭照 · 山景影樓" loading="lazy" srcset="images/Portfolio/family/02-480.jpg 480w, images/Portfolio/family/02-800.jpg 800w, images/Portfolio/family/02-1200.jpg 1200w, images/Portfolio/family/02.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/03.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/03-480.avif 480w, images/Portfolio/family/03-800.avif 800w, images/Portfolio/family/03-1200.avif 1200w, images/Portfolio/family/03.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/03.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/03-480.jpg 480w, images/Portfolio/family/03-800.jpg 800w, images/Portfolio/family/03-1200.jpg 1200w, images/Portfolio/family/03.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/04.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/04-480.avif 480w, images/Portfolio/family/04-800.avif 800w, images/Portfolio/family/04-1200.avif 1200w, images/Portfolio/family/04.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/04.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/04-480.jpg 480w, images/Portfolio/family/04-800.jpg 800w, images/Portfolio/family/04-1200.jpg 1200w, images/Portfolio/family/04.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/05.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/05-480.avif 480w, images/Portfolio/family/05-800.avif 800w, images/Portfolio/family/05.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/05.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/05-480.jpg 480w, images/Portfolio/family/05-800.jpg 800w, images/Portfolio/family/05.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/06.jpg" alt="家庭照 · 山景影樓" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/06-480.avif 480w, images/Portfolio/family/06-800.avif 800w, images/Portfolio/family/06.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/06.jpg" alt="家庭照 · 山景影樓" loading="lazy" srcset="images/Portfolio/family/06-480.jpg 480w, images/Portfolio/family/06-800.jpg 800w, images/Portfolio/family/06.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>山景</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/07.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/07-480.avif 480w, images/Portfolio/family/07-800.avif 800w, images/Portfolio/family/07-1200.avif 1200w, images/Portfolio/family/07.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/07.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/07-480.jpg 480w, images/Portfolio/family/07-800.jpg 800w, images/Portfolio/family/07-1200.jpg 1200w, images/Portfolio/family/07.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/08.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/08-480.avif 480w, images/Portfolio/family/08-800.avif 800w, images/Portfolio/family/08-1200.avif 1200w, images/Portfolio/family/08.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/08.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/08-480.jpg 480w, images/Portfolio/family/08-800.jpg 800w, images/Portfolio/family/08-1200.jpg 1200w, images/Portfolio/family/08.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/09.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/09-480.avif 480w, images/Portfolio/family/09-800.avif 800w, images/Portfolio/family/09-1200.avif 1200w, images/Portfolio/family/09.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/09.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/09-480.jpg 480w, images/Portfolio/family/09-800.jpg 800w, images/Portfolio/family/09-1200.jpg 1200w, images/Portfolio/family/09.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/10.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/10-480.avif 480w, images/Portfolio/family/10-800.avif 800w, images/Portfolio/family/10.avif 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /><img width="1067" height="1600" class="portfolio-photo" src="images/Portfolio/family/10.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/10-480.jpg 480w, images/Portfolio/family/10-800.jpg 800w, images/Portfolio/family/10.jpg 1067w" sizes="(max-width: 768px) calc(50vw - 30px), (max-width: 1280px) calc(33.33vw - 40px), 387px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/12.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/12-480.avif 480w, images/Portfolio/family/12-800.avif 800w, images/Portfolio/family/12-1200.avif 1200w, images/Portfolio/family/12.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/12.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/12-480.jpg 480w, images/Portfolio/family/12-800.jpg 800w, images/Portfolio/family/12-1200.jpg 1200w, images/Portfolio/family/12.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
         <div class="portfolio-item fade-in" data-category="family">
-          <img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/13.jpg" alt="家庭照 · 家居風場景" loading="lazy" />
+          <picture><source type="image/avif" srcset="images/Portfolio/family/13-480.avif 480w, images/Portfolio/family/13-800.avif 800w, images/Portfolio/family/13-1200.avif 1200w, images/Portfolio/family/13.avif 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /><img width="1600" height="1067" class="portfolio-photo" src="images/Portfolio/family/13.jpg" alt="家庭照 · 家居風場景" loading="lazy" srcset="images/Portfolio/family/13-480.jpg 480w, images/Portfolio/family/13-800.jpg 800w, images/Portfolio/family/13-1200.jpg 1200w, images/Portfolio/family/13.jpg 1600w" sizes="(max-width: 768px) calc(100vw - 60px), (max-width: 1280px) calc(62.5vw - 75px), 725px" /></picture>
           <div class="hover-caption"><span>家居風</span></div>
         </div>
       </div>
@@ -1317,7 +1320,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 01" aria-label="放大檢視：IG 客戶訊息 01">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="534" src="images/Testimonials/testimonial-01.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 01" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-01-480.avif 480w, images/Testimonials/testimonial-01-800.avif 800w, images/Testimonials/testimonial-01-1200.avif 1200w, images/Testimonials/testimonial-01.avif 1284w" sizes="280px" /><img width="1284" height="534" src="images/Testimonials/testimonial-01.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 01" loading="lazy" srcset="images/Testimonials/testimonial-01-480.jpg 480w, images/Testimonials/testimonial-01-800.jpg 800w, images/Testimonials/testimonial-01-1200.jpg 1200w, images/Testimonials/testimonial-01.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「唔該晒你哋呀，我哋收到晒啲相。你哋嗰度環境好好，好舒服，同埋好乾淨，攝影師好細心，我同我先生都好滿意啲相。另外原來我有好多朋友都係幫襯你哋。希望第日再有機會搵你哋影家庭相」</figcaption>
@@ -1327,7 +1330,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 02" aria-label="放大檢視：IG 客戶訊息 02">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="507" src="images/Testimonials/testimonial-02.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 02" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-02-480.avif 480w, images/Testimonials/testimonial-02-800.avif 800w, images/Testimonials/testimonial-02-1200.avif 1200w, images/Testimonials/testimonial-02.avif 1284w" sizes="280px" /><img width="1284" height="507" src="images/Testimonials/testimonial-02.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 02" loading="lazy" srcset="images/Testimonials/testimonial-02-480.jpg 480w, images/Testimonials/testimonial-02-800.jpg 800w, images/Testimonials/testimonial-02-1200.jpg 1200w, images/Testimonials/testimonial-02.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「好呀～唔該晒 我同先生都好滿意～估唔到男士既參與度都可以咁多 我先生講笑咁問點解無佢單人照 下次影after再見，唔該晒」</figcaption>
@@ -1337,7 +1340,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 03" aria-label="放大檢視：IG 客戶訊息 03">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="279" src="images/Testimonials/testimonial-03.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 03" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-03-480.avif 480w, images/Testimonials/testimonial-03-800.avif 800w, images/Testimonials/testimonial-03-1200.avif 1200w, images/Testimonials/testimonial-03.avif 1284w" sizes="280px" /><img width="1284" height="279" src="images/Testimonials/testimonial-03.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 03" loading="lazy" srcset="images/Testimonials/testimonial-03-480.jpg 480w, images/Testimonials/testimonial-03-800.jpg 800w, images/Testimonials/testimonial-03-1200.jpg 1200w, images/Testimonials/testimonial-03.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「啲相好靚唔該晒 小朋友一開始狀態一般，但影出黎都好靚好自然，多謝你幫我哋留住美好一刻，辛苦晒」</figcaption>
@@ -1347,7 +1350,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 04" aria-label="放大檢視：IG 客戶訊息 04">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="222" src="images/Testimonials/testimonial-04.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 04" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-04-480.avif 480w, images/Testimonials/testimonial-04-800.avif 800w, images/Testimonials/testimonial-04-1200.avif 1200w, images/Testimonials/testimonial-04.avif 1284w" sizes="280px" /><img width="1284" height="222" src="images/Testimonials/testimonial-04.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 04" loading="lazy" srcset="images/Testimonials/testimonial-04-480.jpg 480w, images/Testimonials/testimonial-04-800.jpg 800w, images/Testimonials/testimonial-04-1200.jpg 1200w, images/Testimonials/testimonial-04.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「Thankyou 啲相影得好靚 攝影師真係好有心機幫我地影同教我地擺pose」</figcaption>
@@ -1357,7 +1360,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 05" aria-label="放大檢視：IG 客戶訊息 05">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="363" src="images/Testimonials/testimonial-05.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 05" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-05-480.avif 480w, images/Testimonials/testimonial-05-800.avif 800w, images/Testimonials/testimonial-05-1200.avif 1200w, images/Testimonials/testimonial-05.avif 1284w" sizes="280px" /><img width="1284" height="363" src="images/Testimonials/testimonial-05.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 05" loading="lazy" srcset="images/Testimonials/testimonial-05-480.jpg 480w, images/Testimonials/testimonial-05-800.jpg 800w, images/Testimonials/testimonial-05-1200.jpg 1200w, images/Testimonials/testimonial-05.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「Thank you!! 效率好高，兩星期就已經收到相 好滿意啲相，攝影師好專業又細心，化妝師都好好，妝感夠自然」</figcaption>
@@ -1367,7 +1370,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 06" aria-label="放大檢視：IG 客戶訊息 06">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1320" height="288" src="images/Testimonials/testimonial-06.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 06" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-06-480.avif 480w, images/Testimonials/testimonial-06-800.avif 800w, images/Testimonials/testimonial-06-1200.avif 1200w, images/Testimonials/testimonial-06.avif 1320w" sizes="280px" /><img width="1320" height="288" src="images/Testimonials/testimonial-06.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 06" loading="lazy" srcset="images/Testimonials/testimonial-06-480.jpg 480w, images/Testimonials/testimonial-06-800.jpg 800w, images/Testimonials/testimonial-06-1200.jpg 1200w, images/Testimonials/testimonial-06.jpg 1320w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「同埋想俾返個好評你哋呀，嗰日影得好順暢，亦都感受到你嘅專業，同埋影出嚟未Retouch都已經覺得好靚」</figcaption>
@@ -1377,7 +1380,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 07" aria-label="放大檢視：IG 客戶訊息 07">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="246" src="images/Testimonials/testimonial-07.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 07" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-07-480.avif 480w, images/Testimonials/testimonial-07-800.avif 800w, images/Testimonials/testimonial-07-1200.avif 1200w, images/Testimonials/testimonial-07.avif 1284w" sizes="280px" /><img width="1284" height="246" src="images/Testimonials/testimonial-07.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 07" loading="lazy" srcset="images/Testimonials/testimonial-07-480.jpg 480w, images/Testimonials/testimonial-07-800.jpg 800w, images/Testimonials/testimonial-07-1200.jpg 1200w, images/Testimonials/testimonial-07.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「啲相影得好warm呀 果日bb咁扭計都影到真係麻煩晒攝影師」</figcaption>
@@ -1387,7 +1390,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 08" aria-label="放大檢視：IG 客戶訊息 08">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="210" src="images/Testimonials/testimonial-08.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 08" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-08-480.avif 480w, images/Testimonials/testimonial-08-800.avif 800w, images/Testimonials/testimonial-08-1200.avif 1200w, images/Testimonials/testimonial-08.avif 1284w" sizes="280px" /><img width="1284" height="210" src="images/Testimonials/testimonial-08.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 08" loading="lazy" srcset="images/Testimonials/testimonial-08-480.jpg 480w, images/Testimonials/testimonial-08-800.jpg 800w, images/Testimonials/testimonial-08-1200.jpg 1200w, images/Testimonials/testimonial-08.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「Thanks so much~~ 多謝你地給我一個美好既回憶～」</figcaption>
@@ -1397,7 +1400,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 09" aria-label="放大檢視：IG 客戶訊息 09">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1320" height="388" src="images/Testimonials/testimonial-09.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 09" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-09-480.avif 480w, images/Testimonials/testimonial-09-800.avif 800w, images/Testimonials/testimonial-09-1200.avif 1200w, images/Testimonials/testimonial-09.avif 1320w" sizes="280px" /><img width="1320" height="388" src="images/Testimonials/testimonial-09.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 09" loading="lazy" srcset="images/Testimonials/testimonial-09-480.jpg 480w, images/Testimonials/testimonial-09-800.jpg 800w, images/Testimonials/testimonial-09-1200.jpg 1200w, images/Testimonials/testimonial-09.jpg 1320w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「好鐘意你影既相 影到bb好可愛 好多相唔使執都已經好靚，揀相揀得好輕鬆」</figcaption>
@@ -1407,7 +1410,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 10" aria-label="放大檢視：IG 客戶訊息 10">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="123" src="images/Testimonials/testimonial-10.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 10" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-10-480.avif 480w, images/Testimonials/testimonial-10-800.avif 800w, images/Testimonials/testimonial-10-1200.avif 1200w, images/Testimonials/testimonial-10.avif 1284w" sizes="280px" /><img width="1284" height="123" src="images/Testimonials/testimonial-10.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 10" loading="lazy" srcset="images/Testimonials/testimonial-10-480.jpg 480w, images/Testimonials/testimonial-10-800.jpg 800w, images/Testimonials/testimonial-10-1200.jpg 1200w, images/Testimonials/testimonial-10.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「多謝你為我地一家拍下咁珍貴嘅時刻!」</figcaption>
@@ -1417,7 +1420,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 11" aria-label="放大檢視：IG 客戶訊息 11">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="495" src="images/Testimonials/testimonial-11.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 11" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-11-480.avif 480w, images/Testimonials/testimonial-11-800.avif 800w, images/Testimonials/testimonial-11-1200.avif 1200w, images/Testimonials/testimonial-11.avif 1284w" sizes="280px" /><img width="1284" height="495" src="images/Testimonials/testimonial-11.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 11" loading="lazy" srcset="images/Testimonials/testimonial-11-480.jpg 480w, images/Testimonials/testimonial-11-800.jpg 800w, images/Testimonials/testimonial-11-1200.jpg 1200w, images/Testimonials/testimonial-11.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「Thank you so much 無retouch和有retouch的攝影作品都好好，期待BB出世之後嘅After拍攝 同埋你地提供唔同款式的孕婦衫真係好齊，睇得出你地有用心揀過選購」</figcaption>
@@ -1427,7 +1430,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 12" aria-label="放大檢視：IG 客戶訊息 12">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="285" src="images/Testimonials/testimonial-12.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 12" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-12-480.avif 480w, images/Testimonials/testimonial-12-800.avif 800w, images/Testimonials/testimonial-12-1200.avif 1200w, images/Testimonials/testimonial-12.avif 1284w" sizes="280px" /><img width="1284" height="285" src="images/Testimonials/testimonial-12.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 12" loading="lazy" srcset="images/Testimonials/testimonial-12-480.jpg 480w, images/Testimonials/testimonial-12-800.jpg 800w, images/Testimonials/testimonial-12-1200.jpg 1200w, images/Testimonials/testimonial-12.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「多謝晒你! 太太同我都好開心兩胎有你為我地拍下珍貴嘅時刻!」</figcaption>
@@ -1437,7 +1440,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 13" aria-label="放大檢視：IG 客戶訊息 13">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1320" height="592" src="images/Testimonials/testimonial-13.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 13" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-13-480.avif 480w, images/Testimonials/testimonial-13-800.avif 800w, images/Testimonials/testimonial-13-1200.avif 1200w, images/Testimonials/testimonial-13.avif 1320w" sizes="280px" /><img width="1320" height="592" src="images/Testimonials/testimonial-13.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 13" loading="lazy" srcset="images/Testimonials/testimonial-13-480.jpg 480w, images/Testimonials/testimonial-13-800.jpg 800w, images/Testimonials/testimonial-13-1200.jpg 1200w, images/Testimonials/testimonial-13.jpg 1320w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「Ommmmg!! 好多謝你哋咁快可以俾到相我，啲相好靚 特別多謝攝影哥哥嗰日好有耐性咁氹哥哥 我好鍾意呢輯相, 可以post 上IG and FB r! 我會連埋上一輯再揀啲相之後覆你哋， thank you very much!!」</figcaption>
@@ -1447,7 +1450,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 14" aria-label="放大檢視：IG 客戶訊息 14">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1320" height="288" src="images/Testimonials/testimonial-14.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 14" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-14-480.avif 480w, images/Testimonials/testimonial-14-800.avif 800w, images/Testimonials/testimonial-14-1200.avif 1200w, images/Testimonials/testimonial-14.avif 1320w" sizes="280px" /><img width="1320" height="288" src="images/Testimonials/testimonial-14.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 14" loading="lazy" srcset="images/Testimonials/testimonial-14-480.jpg 480w, images/Testimonials/testimonial-14-800.jpg 800w, images/Testimonials/testimonial-14-1200.jpg 1200w, images/Testimonials/testimonial-14.jpg 1320w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「好的 謝謝你 影得好靚 下次我都會再揀返你地同埋會介紹比朋友黎影 無論係拍攝效果、服務、效率都做到好好」</figcaption>
@@ -1457,7 +1460,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 15" aria-label="放大檢視：IG 客戶訊息 15">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1320" height="652" src="images/Testimonials/testimonial-15.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 15" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-15-480.avif 480w, images/Testimonials/testimonial-15-800.avif 800w, images/Testimonials/testimonial-15-1200.avif 1200w, images/Testimonials/testimonial-15.avif 1320w" sizes="280px" /><img width="1320" height="652" src="images/Testimonials/testimonial-15.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 15" loading="lazy" srcset="images/Testimonials/testimonial-15-480.jpg 480w, images/Testimonials/testimonial-15-800.jpg 800w, images/Testimonials/testimonial-15-1200.jpg 1200w, images/Testimonials/testimonial-15.jpg 1320w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「唔該晒! d相影得好靚好開心 多謝你地係我嘅孕期又增添一份美好嘅回憶～ 我同老公影相當日都覺得成個體驗都好舒服～化妝師同攝影師都好專業! 影相個時完全唔洗意擺咩pose 點擺pose 真係好啱我地呢d平時一對住鏡頭就尷尬嘅人 如果有fd將來要影孕照, 實會推薦比佢地! 希望你地生意長做長有～越做越好」</figcaption>
@@ -1467,7 +1470,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 16" aria-label="放大檢視：IG 客戶訊息 16">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="369" src="images/Testimonials/testimonial-16.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 16" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-16-480.avif 480w, images/Testimonials/testimonial-16-800.avif 800w, images/Testimonials/testimonial-16-1200.avif 1200w, images/Testimonials/testimonial-16.avif 1284w" sizes="280px" /><img width="1284" height="369" src="images/Testimonials/testimonial-16.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 16" loading="lazy" srcset="images/Testimonials/testimonial-16-480.jpg 480w, images/Testimonials/testimonial-16-800.jpg 800w, images/Testimonials/testimonial-16-1200.jpg 1200w, images/Testimonials/testimonial-16.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「謝謝你幫我哋影咗輯靚相 當日影到好劫,但攝影師好溫柔不斷鼓勵同指導生硬嘅我哋擺pose, 影出黎效果比想像中好,衷心感謝你為我哋留下美好回憶」</figcaption>
@@ -1477,7 +1480,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 17" aria-label="放大檢視：IG 客戶訊息 17">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="369" src="images/Testimonials/testimonial-17.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 17" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-17-480.avif 480w, images/Testimonials/testimonial-17-800.avif 800w, images/Testimonials/testimonial-17-1200.avif 1200w, images/Testimonials/testimonial-17.avif 1284w" sizes="280px" /><img width="1284" height="369" src="images/Testimonials/testimonial-17.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 17" loading="lazy" srcset="images/Testimonials/testimonial-17-480.jpg 480w, images/Testimonials/testimonial-17-800.jpg 800w, images/Testimonials/testimonial-17-1200.jpg 1200w, images/Testimonials/testimonial-17.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「好靚呀啲相 New born再麻煩你地啦」</figcaption>
@@ -1487,7 +1490,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 18" aria-label="放大檢視：IG 客戶訊息 18">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="366" src="images/Testimonials/testimonial-18.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 18" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-18-480.avif 480w, images/Testimonials/testimonial-18-800.avif 800w, images/Testimonials/testimonial-18-1200.avif 1200w, images/Testimonials/testimonial-18.avif 1284w" sizes="280px" /><img width="1284" height="366" src="images/Testimonials/testimonial-18.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 18" loading="lazy" srcset="images/Testimonials/testimonial-18-480.jpg 480w, images/Testimonials/testimonial-18-800.jpg 800w, images/Testimonials/testimonial-18-1200.jpg 1200w, images/Testimonials/testimonial-18.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「多謝你地 甘有耐性同細心 又幫我氹埋大女，服務一流 上次孕照啲相好靚，好期待今次nb啲相」</figcaption>
@@ -1497,7 +1500,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 19" aria-label="放大檢視：IG 客戶訊息 19">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1320" height="408" src="images/Testimonials/testimonial-19.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 19" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-19-480.avif 480w, images/Testimonials/testimonial-19-800.avif 800w, images/Testimonials/testimonial-19-1200.avif 1200w, images/Testimonials/testimonial-19.avif 1320w" sizes="280px" /><img width="1320" height="408" src="images/Testimonials/testimonial-19.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 19" loading="lazy" srcset="images/Testimonials/testimonial-19-480.jpg 480w, images/Testimonials/testimonial-19-800.jpg 800w, images/Testimonials/testimonial-19-1200.jpg 1200w, images/Testimonials/testimonial-19.jpg 1320w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「我同老公都好滿意輯相，好多相唔洗retouch都好靚 多謝當日嘅攝影師細心不厭其煩地教我哋擺pose，影出我哋心水想要靚相，化妝師又化得我自然妝感又靚，thank you so much」</figcaption>
@@ -1507,7 +1510,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 20" aria-label="放大檢視：IG 客戶訊息 20">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="225" src="images/Testimonials/testimonial-20.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 20" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-20-480.avif 480w, images/Testimonials/testimonial-20-800.avif 800w, images/Testimonials/testimonial-20-1200.avif 1200w, images/Testimonials/testimonial-20.avif 1284w" sizes="280px" /><img width="1284" height="225" src="images/Testimonials/testimonial-20.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 20" loading="lazy" srcset="images/Testimonials/testimonial-20-480.jpg 480w, images/Testimonials/testimonial-20-800.jpg 800w, images/Testimonials/testimonial-20-1200.jpg 1200w, images/Testimonials/testimonial-20.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「多謝你地！ 我地收到相好滿意！ 影得好靚」</figcaption>
@@ -1517,7 +1520,7 @@
           <figure class="ig-figure">
             <button type="button" class="ig-screenshot-btn" data-caption="IG 客戶訊息 21" aria-label="放大檢視：IG 客戶訊息 21">
               <div class="ig-screenshot-wrap has-image">
-                <img width="1284" height="387" src="images/Testimonials/testimonial-21.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 21" loading="lazy" />
+                <picture><source type="image/avif" srcset="images/Testimonials/testimonial-21-480.avif 480w, images/Testimonials/testimonial-21-800.avif 800w, images/Testimonials/testimonial-21-1200.avif 1200w, images/Testimonials/testimonial-21.avif 1284w" sizes="280px" /><img width="1284" height="387" src="images/Testimonials/testimonial-21.jpg" alt="客戶喺 Instagram 傳嚟嘅訊息截圖 21" loading="lazy" srcset="images/Testimonials/testimonial-21-480.jpg 480w, images/Testimonials/testimonial-21-800.jpg 800w, images/Testimonials/testimonial-21-1200.jpg 1200w, images/Testimonials/testimonial-21.jpg 1284w" sizes="280px" /></picture>
               </div>
             </button>
             <figcaption class="ig-caption">「揀好，影得好好 有D唔洗retouch感覺都已經好好」</figcaption>
