@@ -328,8 +328,8 @@
     }
     .hero::before {
       content: ''; position: absolute; inset: 0; z-index: 0;
-      background-image: url('images/Portfolio/maternity/natural/01.jpg');
-      background-image: image-set(url('images/Portfolio/maternity/natural/01.avif') type('image/avif'), url('images/Portfolio/maternity/natural/01.jpg') type('image/jpeg'));
+      background-image: url('/images/Portfolio/maternity/natural/01.jpg');
+      background-image: image-set(url('/images/Portfolio/maternity/natural/01.avif') type('image/avif'), url('/images/Portfolio/maternity/natural/01.jpg') type('image/jpeg'));
       background-size: cover; background-position: center 28%;
       transform: scale(1.02);
     }
@@ -577,6 +577,7 @@
     .highlights-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; margin-bottom: 64px; }
     .highlight-stat { font-family: var(--font-display); font-size: clamp(36px, 5vw, 52px); color: var(--accent-dark); line-height: 1.1; margin-bottom: 8px; }
     .highlight-label { font-size: 14px; color: var(--muted); letter-spacing: 0.04em; }
+    .highlight-stat a, .hero-trust li a { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
     .testimonials-intro { text-align: center; color: var(--muted); font-size: 16px; max-width: 520px; margin: 16px auto 0; line-height: 1.7; }
     .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .category-tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-dark); background: var(--accent-subtle); padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
@@ -888,7 +889,7 @@
         <a href="#portfolio" class="btn btn-light">View portfolio</a>
       </div>
       <ul class="hero-trust">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Over 10,000 Instagram followers</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener">Over 10,000 Instagram followers</a></li>
         <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.1 6.7.9-4.9 4.6 1.2 6.6L12 18.6 6.1 20.2l1.2-6.6L2.4 9l6.7-.9z"/></svg>Real client reviews</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Mountain-view studio &amp; home-style set, Tsuen Wan</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Maternity, newborn, 100 days and family, all in one studio</li>
@@ -1311,9 +1312,9 @@
         <p class="testimonials-intro">Real Instagram messages from our clients, shown as received in Chinese, with English translations below each screenshot. Tap any screenshot to enlarge.</p>
       </div>
       <div class="highlights-grid">
-        <div class="fade-in"><div class="highlight-stat">3000+</div><div class="highlight-label">Happy families</div></div>
+        <div class="fade-in"><div class="highlight-stat">3,000+</div><div class="highlight-label">Families served</div></div>
         <div class="fade-in"><div class="highlight-stat">98%</div><div class="highlight-label">Would recommend</div></div>
-        <div class="fade-in"><div class="highlight-stat">5★</div><div class="highlight-label">Average rating</div></div>
+        <div class="fade-in"><div class="highlight-stat"><a href="https://www.google.com/maps/place/Gypsophila+Photography/@22.3736668,114.1035451,17z/data=!4m8!3m7!1s0x3403f9e422e31caf:0xf1ee814b1bdf6856!8m2!3d22.3736668!4d114.1061254!9m1!1b1!16s%2Fg%2F11vkrht3kj" target="_blank" rel="noopener">5★</a></div><div class="highlight-label">Average rating</div></div>
         <div class="fade-in"><div class="highlight-stat">3</div><div class="highlight-label">Specialist brands</div></div>
       </div>
       <div class="testimonials-grid">
