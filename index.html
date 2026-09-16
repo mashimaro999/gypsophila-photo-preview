@@ -101,28 +101,6 @@
     ]
   }
 </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "攝影預約流程係點？", "acceptedAnswer": { "@type": "Answer", "text": "選擇 Package → 選擇拍攝日期和時間 → 落訂確認。" } },
-      { "@type": "Question", "name": "孕婦幾多週拍攝最理想？", "acceptedAnswer": { "@type": "Answer", "text": "建議 28-32 週拍攝，因為 36 週後肚子急速增大，部分媽媽亦會出現水腫、腰背疼痛等情況。" } },
-      { "@type": "Question", "name": "孕婦攝影有冇化妝服務？", "acceptedAnswer": { "@type": "Answer", "text": "所有孕婦拍攝套餐已經包咗化妝及髮型造型服務。" } },
-      { "@type": "Question", "name": "孕婦攝影衣服要準備嗎？", "acceptedAnswer": { "@type": "Answer", "text": "我哋有多款衣服提供畀孕婦媽媽配搭選擇，爸爸衣服需自備。" } },
-      { "@type": "Question", "name": "拍攝需要準備道具嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以準備 BB 超聲波相、衫仔鞋仔、自製相簿或對你哋有紀念價值嘅小道具，令輯相更加獨一無二。" } },
-      { "@type": "Question", "name": "可以帶毛孩一起拍攝嗎？", "acceptedAnswer": { "@type": "Answer", "text": "毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。加人（包括毛孩）每位 $300。" } },
-      { "@type": "Question", "name": "如果拍攝當日天氣惡劣可以改期嗎？", "acceptedAnswer": { "@type": "Answer", "text": "黑雨 / 8 號風球或以上，可安排免費改期一次。如需改期，請於化妝時間前最少兩小時通知我哋。" } },
-      { "@type": "Question", "name": "初生BB幾時拍攝最好？", "acceptedAnswer": { "@type": "Answer", "text": "建議最佳拍攝期為出生後 7-14 日，因為呢個階段 BB 嘅關節同肌肉仲係好柔軟，另外大部分時間處於深度睡眠，更容易配合拍攝。" } },
-      { "@type": "Question", "name": "有沒有上門攝影服務？", "acceptedAnswer": { "@type": "Answer", "text": "初生嬰兒拍攝可選上門服務（+$1,000），或嚟我哋 Studio（荃灣 TML Tower）；其他服務均於 Studio 拍攝。部分大型造型道具只限 Studio 拍攝。" } },
-      { "@type": "Question", "name": "Studio 可以最多容納幾多人拍攝？", "acceptedAnswer": { "@type": "Answer", "text": "大約 20 人左右都可以，適合大家族全家福。" } },
-      { "@type": "Question", "name": "你哋影樓喺邊度？係咪荃灣？", "acceptedAnswer": { "@type": "Answer", "text": "我哋 Studio 位於荃灣 TML Tower，交通方便，大廈內設有停車場。" } },
-      { "@type": "Question", "name": "有冇韓式大肚相（孕婦寫真）？", "acceptedAnswer": { "@type": "Answer", "text": "有，孕婦攝影（大肚相 / 孕婦寫真）提供自然風、黑白風及韓式風格，可按喜好配搭。" } },
-      { "@type": "Question", "name": "孕婦相、BB相、全家福大概幾錢？", "acceptedAnswer": { "@type": "Answer", "text": "孕婦攝影由 HKD 2,800 起、初生及百日照由 HKD 3,800 起、家庭攝影（全家福）由 HKD 2,800 起，實際收費視乎人數、場景及需求。" } },
-      { "@type": "Question", "name": "有冇百日宴相、周歲抓周或 Cake Smash？", "acceptedAnswer": { "@type": "Answer", "text": "有，BABYG 提供百日照（百日宴相）、一歲生日照、周歲抓周及 Cake Smash 拍攝。" } }
-    ]
-  }
-  </script>
 
   <style>
     @font-face {
@@ -847,11 +825,28 @@
     ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
     ::selection { background: var(--accent-light); color: var(--fg); }
+/* svc-pages */
+    .nav-has-sub { position: relative; }
+    .nav-sub { list-style: none; margin: 0; padding: 8px 0; }
+    .nav-sub a { display: block; padding: 8px 18px; white-space: nowrap; }
+    @media (min-width: 861px) {
+      .nav-sub { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--bg); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 12px 28px rgba(0,0,0,0.08); opacity: 0; visibility: hidden; transition: opacity 0.18s ease, visibility 0.18s ease; }
+      .nav-has-sub:hover .nav-sub, .nav-has-sub:focus-within .nav-sub { opacity: 1; visibility: visible; }
+    }
+    @media (max-width: 860px) { .nav-sub a { padding-left: 34px; font-size: 14px; } }
+    .svc-hero { padding: calc(var(--nav-height) + 64px) 0 56px; text-align: center; background: var(--accent-light); }
+    .svc-hero h1 { font-size: clamp(30px, 4.2vw, 52px); margin-bottom: 18px; }
+    .svc-hero p { max-width: 720px; margin: 0 auto 28px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+    .svc-hero .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+/* option-a */
+    .nav-has-sub > .nav-sub-toggle { font: inherit; font-size: 15px; font-weight: 500; color: var(--muted); background: none; border: 0; padding: 8px 18px; border-radius: 999px; letter-spacing: 0.02em; cursor: default; }
+    .nav-has-sub:hover > .nav-sub-toggle, .nav-has-sub:focus-within > .nav-sub-toggle { color: var(--fg); background: var(--accent-light); }
+    @media (max-width: 860px) { .nav-has-sub > .nav-sub-toggle { display: block; width: 100%; padding: 12px 16px; font-size: 16px; text-align: right; } }
   </style>
 </head>
 <body>
 
-  <nav class="nav" role="navigation" aria-label="主導覽">
+<nav class="nav" role="navigation" aria-label="主導覽">
     <div class="nav-inner">
       <div class="nav-logo">
         <a href="#hero">Gypsophila Photography</a>
@@ -863,9 +858,9 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero">首頁</a></li>
         <li><a href="#about">關於我們</a></li>
+        <li class="nav-has-sub"><button type="button" class="nav-sub-toggle" aria-haspopup="true">服務</button><ul class="nav-sub"><li><a href="/maternity/">孕婦攝影</a></li><li><a href="/newborn/">初生 BB</a></li><li><a href="/100-days/">百日照</a></li><li><a href="/family/">家庭攝影</a></li></ul></li>
         <li><a href="#portfolio">作品集</a></li>
         <li><a href="#testimonials">客戶心聲</a></li>
-        <li><a href="#faq">FAQ</a></li>
         <li><a href="#pricing">價目表</a></li>
         <li><a href="#booking">預約</a></li>
         <li class="nav-lang"><a href="/en/" hreflang="en" lang="en" aria-label="Switch to English">EN</a></li>
@@ -873,7 +868,7 @@
     </div>
   </nav>
 
-  <section class="hero" id="hero" aria-labelledby="hero-heading">
+<section class="hero" id="hero" aria-labelledby="hero-heading">
     <div class="hero-content">
       <h1 id="hero-heading">
         <img class="hero-logo" src="images/gypsophila-logo-white.webp" alt="Gypsophila Photography" width="1024" height="484" fetchpriority="high" decoding="async" />
@@ -897,7 +892,7 @@
     <div class="hero-scroll-hint" aria-hidden="true"><span></span>向下探索</div>
   </section>
 
-  <section class="about" id="about" aria-labelledby="about-heading">
+<section class="about" id="about" aria-labelledby="about-heading">
     <div class="container">
       <div class="about-grid">
         <div class="about-text fade-in">
@@ -918,7 +913,7 @@
     </div>
   </section>
 
-  <section class="services" id="services" aria-labelledby="services-heading">
+<section class="services" id="services" aria-labelledby="services-heading">
     <div class="container">
       <div class="services-header fade-in">
         <span class="section-label">服務類型</span>
@@ -947,7 +942,7 @@
     </div>
   </section>
 
-  <section class="portfolio" id="portfolio" aria-labelledby="portfolio-heading">
+<section class="portfolio" id="portfolio" aria-labelledby="portfolio-heading">
     <div class="container">
       <div class="portfolio-header fade-in">
         <span class="section-label">Portfolio</span>
@@ -1295,7 +1290,7 @@
     </div>
   </section>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
+<div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox-content" id="lightboxContent">
       <button class="lightbox-close" id="lightboxClose" aria-label="關閉放大檢視">&times;</button>
       <img id="lightboxImg" class="lightbox-img" alt="" />
@@ -1303,7 +1298,7 @@
     </div>
   </div>
 
-  <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+<section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
     <div class="container">
       <div class="testimonials-header fade-in">
         <span class="section-label">Testimonials</span>
@@ -1531,44 +1526,7 @@
     </div>
   </section>
 
-  <section class="faq" id="faq" aria-labelledby="faq-heading">
-    <div class="container">
-      <div class="faq-header fade-in">
-        <span class="section-label">Frequently Asked Questions</span>
-        <h2 id="faq-heading">常見問題</h2>
-      </div>
-      <div class="faq-categories fade-in">
-        <button class="faq-cat-btn active" data-cat="maternity">孕婦篇</button>
-        <button class="faq-cat-btn" data-cat="newborn">初生篇</button>
-        <button class="faq-cat-btn" data-cat="family">家庭篇</button>
-      </div>
-      <div class="faq-list fade-in">
-        <details class="faq-item" data-cat="maternity" open><summary>預約流程係點？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">選擇 Package → 選擇拍攝日期和時間 → 落訂確認</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>幾多週拍攝最理想？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">建議 <strong>28-32 週</strong>拍攝，因為 36 週後肚子急速增大，部分媽媽亦會出現水腫、腰背疼痛等情況。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>有冇化妝服務？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">所有孕婦拍攝套餐已經包咗化妝及髮型造型服務。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>衣服要準備嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋有多款衣服提供畀孕婦媽媽配搭選擇，爸爸衣服需自備。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>需要準備道具嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">可以準備 BB 超聲波相、衫仔鞋仔、自製相簿或對你哋有紀念價值嘅小道具，令輯相更加獨一無二。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>可以帶毛孩一起拍攝嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。加人（包括毛孩）每位 $300。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>如果拍攝當日天氣惡劣？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">黑雨 / 8 號風球或以上，可安排<strong>免費改期一次</strong>。如需改期，請於化妝時間前最少兩小時通知我哋。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>你哋影樓喺邊度？係咪荃灣？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋 Studio 位於<strong>荃灣 TML Tower</strong>，交通方便，大廈內設有停車場。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>有冇韓式大肚相？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">有，孕婦攝影（大肚相 / 孕婦寫真）提供自然風、黑白風及韓式風格，可按你喜好配搭。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>孕婦相、BB相、全家福大概幾錢？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">孕婦攝影由 HKD 2,800 起、初生及百日照由 HKD 3,800 起、家庭攝影（全家福）由 HKD 2,800 起。實際收費視乎人數、場景及需求，詳情請參考價目表或 IG DM 查詢。</div></details>
-
-        <details class="faq-item" data-cat="newborn"><summary>初生 BB 幾時拍攝最好？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">建議最佳拍攝期為出生後 <strong>7-14 日</strong>，因為呢個階段 BB嘅關節同肌肉仲係好柔軟，另外大部分時間處於深度睡眠，更容易配合拍攝。初生 BB 個樣變得好快，所以千祈唔好錯過呢個珍貴時刻。</div></details>
-        <details class="faq-item" data-cat="newborn"><summary>預約流程係點？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">選擇 Package → 落訂確認 → 拍攝日期同時間可以預早約或等 BB 出世再約。</div></details>
-        <details class="faq-item" data-cat="newborn"><summary>有沒有上門服務？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋有提供上門服務或可以嚟我哋 Studio（荃灣 TML TOWER）。</div></details>
-        <details class="faq-item" data-cat="newborn"><summary>上門和 Studio 拍攝有什麼分別？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">有部分造型道具比較大型，較難帶上門，所以只限 Studio 拍攝。</div></details>
-        <details class="faq-item" data-cat="newborn"><summary>初生 BB 相上門影定去影樓好？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">兩種都可以。上門影 BB 方便初生寶寶，唔使舟車勞頓；影樓（荃灣 Studio）則有更多造型場景同道具選擇。</div></details>
-        <details class="faq-item" data-cat="newborn"><summary>有冇百日宴相、周歲抓周或 Cake Smash？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">有，BABYG 提供百日照（百日宴相）、一歲生日照、周歲抓周及 Cake Smash 拍攝，紀錄 BB 每個成長里程碑。</div></details>
-
-        <details class="faq-item" data-cat="family"><summary>Studio 可以最多容納幾多人拍攝？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">大約 <strong>20 人</strong>左右都可以。家庭套餐包 <strong>10 人內</strong>，額外每位 $300。</div></details>
-        <details class="faq-item" data-cat="family"><summary>全家福可以帶毛孩一齊影嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。加人（包括毛孩）每位 $300。</div></details>
-        <details class="faq-item" data-cat="family"><summary>荃灣有冇影全家福 / 親子相？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">有，我哋荃灣 Studio 提供家庭攝影（全家福 / 親子相 / 三代同堂）。</div></details>
-      </div>
-    </div>
-  </section>
-
-  <section class="pricing" id="pricing" aria-labelledby="pricing-heading">
+<section class="pricing" id="pricing" aria-labelledby="pricing-heading">
     <div class="container">
       <div class="pricing-header fade-in">
         <span class="section-label">Rate Card</span>
@@ -1639,7 +1597,7 @@
     </div>
   </section>
 
-  <section class="booking" id="booking" aria-labelledby="booking-heading">
+<section class="booking" id="booking" aria-labelledby="booking-heading">
     <div class="container">
       <div class="booking-header fade-in">
         <span class="section-label">How It Works</span>
@@ -1667,7 +1625,7 @@
     </div>
   </section>
 
-  <section class="cta-section">
+<section class="cta-section">
     <div class="container">
       <h2>準備好創造你嘅回憶？</h2>
       <p>我哋用鏡頭，等緊你嘅故事。</p>
@@ -1677,7 +1635,7 @@
     </div>
   </section>
 
-  <footer class="footer" role="contentinfo">
+<footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div>
@@ -1698,7 +1656,6 @@
             <li><a href="#about">關於我們</a></li>
             <li><a href="#portfolio">作品集</a></li>
             <li><a href="#testimonials">客戶心聲</a></li>
-            <li><a href="#faq">FAQ</a></li>
             <li><a href="#pricing">價目表</a></li>
           </ul>
         </div>
@@ -1978,6 +1935,5 @@
       updateActiveNav();
     })();
   </script>
-
 </body>
 </html>
