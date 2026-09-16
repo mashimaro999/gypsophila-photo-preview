@@ -206,6 +206,8 @@
       --accent-dark: oklch(56% 0.09 155);
       --accent-light: oklch(93% 0.018 155);
       --accent-subtle: oklch(96% 0.008 155);
+      --accent-strong: oklch(55% 0.10 155);
+      --accent-deep: oklch(50% 0.09 155);
       --font-display: 'Iowan Old Style', 'Charter', 'Georgia', 'Times New Roman', serif;
       --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang HK', 'Microsoft JhengHei', system-ui, sans-serif;
       --max-width: 1280px;
@@ -254,7 +256,7 @@
       font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--accent-dark);
+      color: var(--accent-deep);
       margin-bottom: 16px;
     }
     a { color: var(--accent-dark); text-decoration: none; transition: color var(--transition); }
@@ -375,11 +377,11 @@
       cursor: pointer; transition: all var(--transition);
       border: none; text-decoration: none; font-family: var(--font-body);
     }
-    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary { background: var(--accent-strong); color: #fff; }
     .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); box-shadow: 0 8px 24px oklch(72% 0.07 155 / 0.35); color: #fff; }
     .btn-ghost { background: transparent; color: var(--fg); border: 1.5px solid var(--border); }
     .btn-ghost:hover { border-color: var(--accent); color: var(--accent-dark); background: var(--accent-subtle); }
-    .btn-outline { background: transparent; color: var(--accent-dark); border: 1.5px solid var(--accent); }
+    .btn-outline { background: transparent; color: var(--accent-deep); border: 1.5px solid var(--accent); }
     .btn-outline:hover { background: var(--accent); color: #fff; }
 
     /* HERO */
@@ -752,7 +754,7 @@
       font-family: var(--font-body); white-space: nowrap;
     }
     .pricing-tab:hover { border-color: var(--accent); color: var(--accent-dark); background: var(--accent-subtle); }
-    .pricing-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .pricing-tab.active { background: var(--accent-strong); color: #fff; border-color: var(--accent-strong); }
     @media (max-width: 768px) {
       .pricing-tabs {
         flex-wrap: nowrap; justify-content: flex-start;
@@ -897,7 +899,7 @@
     }
     .footer p, .footer a { color: oklch(78% 0.005 90); font-size: 15px; line-height: 1.8; }
     .footer a:hover { color: var(--accent); }
-    .footer h4 { color: #fff; font-family: var(--font-body); font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 20px; }
+    .footer h3 { color: #fff; font-family: var(--font-body); font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 20px; }
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .footer-bottom { border-top: 1px solid oklch(30% 0.01 90); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 14px; color: oklch(65% 0.005 90); }
     .footer-social { display: flex; gap: 16px; }
@@ -925,6 +927,11 @@
     .svc-hero p { max-width: 720px; margin: 0 auto 28px; color: var(--muted); font-size: 16px; line-height: 1.7; }
     .svc-hero .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 /* option-a */
+    .nav-lang-mobile, .nav-lang-mobile a { color: oklch(46% 0.012 90); }
+    .svc-proof { padding: 0 0 80px; text-align: center; }
+    .svc-proof p { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
+    .service-card h3 a { color: inherit; text-decoration: none; }
+    .service-card h3 a:hover { color: var(--accent-deep); }
     .nav-has-sub > .nav-sub-toggle { font: inherit; font-size: 15px; font-weight: 500; color: var(--muted); background: none; border: 0; padding: 8px 18px; border-radius: 999px; letter-spacing: 0.02em; cursor: default; }
     .nav-has-sub:hover > .nav-sub-toggle, .nav-has-sub:focus-within > .nav-sub-toggle { color: var(--fg); background: var(--accent-light); }
     @media (max-width: 860px) { .nav-has-sub > .nav-sub-toggle { display: block; width: 100%; padding: 12px 16px; font-size: 16px; text-align: right; } }
@@ -937,7 +944,7 @@
       <div class="nav-logo">
         <a href="/en/">Gypsophila Photography</a>
       </div>
-      <span class="nav-lang-mobile"><a href="/newborn/" hreflang="zh-HK" lang="zh-HK" aria-label="切換至中文版">中文</a></span>
+      <a class="nav-lang-mobile" href="/newborn/" hreflang="zh-HK" lang="zh-HK" aria-label="切換至中文版">中文</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -1053,7 +1060,7 @@
 
 <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox-content" id="lightboxContent">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close enlarged view">&times;</button>
+      <button class="lightbox-close" id="lightboxClose" tabindex="-1" aria-label="Close enlarged view">&times;</button>
       <img id="lightboxImg" class="lightbox-img" alt="" />
       <span id="lightboxLabel">View larger</span>
     </div>
@@ -1090,6 +1097,13 @@
       <div class="ratecard-note fade-in">
         <div class="note-card"><p><strong>Prices shown are a guide.</strong><br />The final quote depends on group size, location, date and any special requests. Message us on Instagram for a personalised quote.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section class="svc-proof" aria-label="Client reviews">
+    <div class="container">
+      <p>Real Instagram messages from clients, each transcribed in full.</p>
+      <a href="/en/#testimonials" class="btn btn-outline">Read all client reviews</a>
     </div>
   </section>
 
@@ -1164,7 +1178,7 @@
           <a href="https://maps.app.goo.gl/mMHbEunoNjb9qh8G7" target="_blank" rel="noopener" class="footer-map-link">📍 Open in Google Maps</a>
         </div>
         <div>
-          <h4>Pages</h4>
+          <h3>Pages</h3>
           <ul class="footer-links">
             <li><a href="/en/#hero">Home</a></li>
             <li><a href="/en/#about">About</a></li>
@@ -1174,7 +1188,7 @@
           </ul>
         </div>
         <div>
-          <h4>Follow us</h4>
+          <h3>Follow us</h3>
           <ul class="footer-links">
             <li><a href="https://www.instagram.com/gypsophila_photo" target="_blank" rel="noopener">📷 @GYPSOPHILA_PHOTO</a></li>
             <li><a href="https://www.instagram.com/BABYG.PHOTO" target="_blank" rel="noopener">🍼 @BABYG.PHOTO</a></li>
@@ -1246,11 +1260,13 @@
         }
         lb.classList.add('open');
         lb.setAttribute('aria-hidden', 'false');
+        lbcn.setAttribute('tabindex', '0');
         document.body.style.overflow = 'hidden';
       }
       function closeLb() {
         lb.classList.remove('open');
         lb.setAttribute('aria-hidden', 'true');
+        lbcn.setAttribute('tabindex', '-1');
         document.body.style.overflow = '';
         lbi.removeAttribute('src');
         lbi.classList.remove('visible');
