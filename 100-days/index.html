@@ -964,6 +964,12 @@
     .breadcrumb a { color: var(--muted); }
     .breadcrumb a:hover { color: var(--accent-deep); }
     .breadcrumb [aria-current] { color: var(--fg); }
+    .svc-process { background: var(--surface); padding: 80px 0; }
+    .process-header { text-align: center; margin-bottom: 36px; }
+    .process-body { max-width: 760px; margin: 0 auto; }
+    .process-body h3 { font-family: var(--font-body); font-size: 16px; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.01em; }
+    .process-body p { color: var(--muted); font-size: 16px; line-height: 1.9; margin-bottom: 24px; }
+    .process-body p:last-child { margin-bottom: 0; }
     .svc-proof { padding: 0 0 80px; text-align: center; }
     .svc-proof p { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
     .service-card h3 a { color: inherit; text-decoration: none; }
@@ -1077,6 +1083,26 @@
     </div>
   </section>
 
+  <section class="svc-process" id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="process-header fade-in"><span class="section-label">How It Works</span><h2 id="process-heading">拍攝流程</h2></div>
+      <div class="process-body fade-in">
+        <h3>拍攝前準備</h3>
+        <p>拍攝之前最好先俾 BB 食飽、睡得夠,到時拍攝會順利好多。</p>
+        <h3>當日流程</h3>
+        <p>到咗影樓之後,如果 BB 需要補奶,可以先餵,之後換上拍攝主題衣服。</p>
+        <h3>拍攝時間</h3>
+        <p>60 至 120 分鐘,視你揀嘅套餐而定。</p>
+        <h3>需要帶咩</h3>
+        <p>你可以帶氣球,或者有紀念價值嘅道具。</p>
+        <h3>衛生</h3>
+        <p>所有包布、衣服同道具,拍攝前都經過嬰兒級消毒。</p>
+        <h3>影樓設施</h3>
+        <p>影樓內設有獨立洗手間同換片床。</p>
+      </div>
+    </div>
+  </section>
+
 <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox-content" id="lightboxContent">
       <button class="lightbox-close" id="lightboxClose" tabindex="-1" aria-label="關閉放大檢視">&times;</button>
@@ -1104,6 +1130,7 @@
           <div class="addon-body">
             <p class="addon-lead">套餐價已包含上表所有內容。以下項目按你需要自由選擇，唔揀就唔會收取。</p>
             <ul class="addon-list">
+              <li><span>1 小時專業化妝及髮型</span><span class="addon-price">+$500/位</span></li>
               <li><span>星期六日 / 公眾假期拍攝</span><span class="addon-price">+$500</span></li>
               <li><span>額外精修相片</span><span class="addon-price">+$100/張</span></li>
               <li><span>加拍攝人數（大人 / 小朋友 / 寵物）</span><span class="addon-price">+$300/位</span></li>
