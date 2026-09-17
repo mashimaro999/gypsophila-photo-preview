@@ -101,6 +101,37 @@
     ]
   }
 </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.gypphoto.com/#website",
+  "url": "https://www.gypphoto.com/",
+  "name": "Gypsophila Photography",
+  "inLanguage": "zh-HK",
+  "publisher": {
+    "@id": "https://www.gypphoto.com/#business"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.gypphoto.com/#webpage",
+  "url": "https://www.gypphoto.com/",
+  "name": "Gypsophila Photography | 荃灣孕婦・初生・百日・家庭攝影，深受香港媽媽喜愛",
+  "inLanguage": "zh-HK",
+  "dateModified": "2026-09-17",
+  "isPartOf": {
+    "@id": "https://www.gypphoto.com/#website"
+  },
+  "about": {
+    "@id": "https://www.gypphoto.com/#business"
+  }
+}
+  </script>
+
 
   <style>
     @font-face {
@@ -843,6 +874,16 @@
     .svc-hero .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 /* option-a */
     .nav-lang-mobile, .nav-lang-mobile a { color: oklch(46% 0.012 90); }
+    .svc-answer { max-width: 740px; margin: 0 auto 28px; color: var(--fg); font-size: 16px; line-height: 1.9; }
+    .svc-crumbline { display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .svc-crumbline .section-label { font-size: 13px; margin: 0; }
+    .svc-crumbline .section-label::before { content: "\00B7"; margin-right: 10px; color: var(--muted); }
+    .breadcrumb { font-size: 13px; letter-spacing: 0.04em; }
+    .breadcrumb ol { list-style: none; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .breadcrumb li + li::before { content: "\203A"; margin-right: 8px; color: var(--muted); }
+    .breadcrumb a { color: var(--muted); }
+    .breadcrumb a:hover { color: var(--accent-deep); }
+    .breadcrumb [aria-current] { color: var(--fg); }
     .svc-proof { padding: 0 0 80px; text-align: center; }
     .svc-proof p { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
     .service-card h3 a { color: inherit; text-decoration: none; }
@@ -876,6 +917,8 @@
     </div>
   </nav>
 
+<main>
+<article>
 <section class="hero" id="hero" aria-labelledby="hero-heading">
     <div class="hero-content">
       <h1 id="hero-heading">
@@ -1642,6 +1685,9 @@
       </div>
     </div>
   </section>
+</article>
+</main>
+
 
 <footer class="footer" role="contentinfo">
     <div class="container">

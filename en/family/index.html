@@ -105,6 +105,57 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://www.gypphoto.com/en/family/#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.gypphoto.com/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Family",
+      "item": "https://www.gypphoto.com/en/family/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.gypphoto.com/en/#website",
+  "url": "https://www.gypphoto.com/en/",
+  "name": "Gypsophila Photography",
+  "inLanguage": "en",
+  "publisher": {
+    "@id": "https://www.gypphoto.com/#business"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.gypphoto.com/en/family/#webpage",
+  "url": "https://www.gypphoto.com/en/family/",
+  "name": "Family Photography in Tsuen Wan, Hong Kong | Gypsophila Photography",
+  "inLanguage": "en",
+  "dateModified": "2026-09-17",
+  "isPartOf": {
+    "@id": "https://www.gypphoto.com/en/#website"
+  },
+  "about": {
+    "@id": "https://www.gypphoto.com/#business"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.gypphoto.com/en/family/#service",
   "name": "Family Photography in Tsuen Wan, Hong Kong",
@@ -920,6 +971,16 @@
     .svc-hero .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 /* option-a */
     .nav-lang-mobile, .nav-lang-mobile a { color: oklch(46% 0.012 90); }
+    .svc-answer { max-width: 740px; margin: 0 auto 28px; color: var(--fg); font-size: 16px; line-height: 1.9; }
+    .svc-crumbline { display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .svc-crumbline .section-label { font-size: 13px; margin: 0; }
+    .svc-crumbline .section-label::before { content: "\00B7"; margin-right: 10px; color: var(--muted); }
+    .breadcrumb { font-size: 13px; letter-spacing: 0.04em; }
+    .breadcrumb ol { list-style: none; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .breadcrumb li + li::before { content: "\203A"; margin-right: 8px; color: var(--muted); }
+    .breadcrumb a { color: var(--muted); }
+    .breadcrumb a:hover { color: var(--accent-deep); }
+    .breadcrumb [aria-current] { color: var(--fg); }
     .svc-proof { padding: 0 0 80px; text-align: center; }
     .svc-proof p { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
     .service-card h3 a { color: inherit; text-decoration: none; }
@@ -947,11 +1008,22 @@
     </div>
   </nav>
 
-  <section class="svc-hero" id="hero" aria-labelledby="svc-heading">
+  <main>
+<article>
+<section class="svc-hero" id="hero" aria-labelledby="svc-heading">
     <div class="container">
-      <span class="section-label">Family</span>
+      <div class="svc-crumbline">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/en/">Home</a></li>
+            <li><span aria-current="page">Family</span></li>
+          </ol>
+        </nav>
+        
+      </div>
       <h1 id="svc-heading">Family photography in Tsuen Wan</h1>
       <p>Parent and child, full family and three generations, in our Tsuen Wan studio</p>
+      <p class="svc-answer">Full family, parent-and-child and three-generation portraits at our Tsuen Wan studio in TML Tower. From HKD 2,800 for up to 10 people, $300 for each additional person; the studio holds about 20.</p>
       <div class="hero-cta">
         <a href="https://ig.me/m/FAMILYG.PHOTO" target="_blank" rel="noopener" class="btn btn-primary">Message us on Instagram</a>
         <a href="#packages" class="btn btn-outline">See packages</a>
@@ -1096,12 +1168,12 @@
         <h2 id="faq-heading">Frequently asked questions</h2>
       </div>
       <div class="faq-list fade-in">
-        <details class="faq-item" data-cat="maternity" open><summary>How does booking work?<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">Choose a package, then your date and time, then pay the deposit to confirm.</div></details>
-        <details class="faq-item" data-cat="family"><summary>How many people fit in the studio?<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">Around <strong>20 people</strong>. Note that family packages include up to 10 people, with extra guests at HKD 300 each.</div></details>
-        <details class="faq-item" data-cat="family"><summary>Can our pet join the family portrait?<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">Pets are family too, so they are very welcome. Each extra member, including pets, is HKD 300.</div></details>
-        <details class="faq-item" data-cat="family"><summary>Do you shoot family portraits in Tsuen Wan?<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">Yes. Our Tsuen Wan studio covers full family portraits, parent and child sessions and three generation groups.</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>What if there is a typhoon or black rainstorm?<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">Under a black rainstorm warning or typhoon signal 8 or above we will <strong>reschedule once free of charge</strong>. Please tell us at least two hours before your shoot time.</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>Where is the studio?<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">Our studio is at <strong>TML Tower, Tsuen Wan</strong>. It is easy to reach by public transport and the building has parking.</div></details>
+        <details class="faq-item" data-cat="maternity" open><summary>How does booking work?<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">Choose a package, then your date and time, then pay the deposit to confirm.</p></details>
+        <details class="faq-item" data-cat="family"><summary>How many people fit in the studio?<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">Around <strong>20 people</strong>. Note that family packages include up to 10 people, with extra guests at HKD 300 each.</p></details>
+        <details class="faq-item" data-cat="family"><summary>Can our pet join the family portrait?<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">Pets are family too, so they are very welcome. Each extra member, including pets, is HKD 300.</p></details>
+        <details class="faq-item" data-cat="family"><summary>Do you shoot family portraits in Tsuen Wan?<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">Yes. Our Tsuen Wan studio covers full family portraits, parent and child sessions and three generation groups.</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>What if there is a typhoon or black rainstorm?<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">Under a black rainstorm warning or typhoon signal 8 or above we will <strong>reschedule once free of charge</strong>. Please tell us at least two hours before your shoot time.</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>Where is the studio?<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">Our studio is at <strong>TML Tower, Tsuen Wan</strong>. It is easy to reach by public transport and the building has parking.</p></details>
       </div>
     </div>
   </section>
@@ -1143,6 +1215,9 @@
       </div>
     </div>
   </section>
+</article>
+</main>
+
 
 <footer class="footer" role="contentinfo">
     <div class="container">

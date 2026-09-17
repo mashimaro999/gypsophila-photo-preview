@@ -104,6 +104,57 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://www.gypphoto.com/newborn/#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://www.gypphoto.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "初生 BB",
+      "item": "https://www.gypphoto.com/newborn/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.gypphoto.com/#website",
+  "url": "https://www.gypphoto.com/",
+  "name": "Gypsophila Photography",
+  "inLanguage": "zh-HK",
+  "publisher": {
+    "@id": "https://www.gypphoto.com/#business"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.gypphoto.com/newborn/#webpage",
+  "url": "https://www.gypphoto.com/newborn/",
+  "name": "初生嬰兒攝影 BB相・上門或荃灣影樓 | Gypsophila Photography",
+  "inLanguage": "zh-HK",
+  "dateModified": "2026-09-17",
+  "isPartOf": {
+    "@id": "https://www.gypphoto.com/#website"
+  },
+  "about": {
+    "@id": "https://www.gypphoto.com/#business"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.gypphoto.com/newborn/#service",
   "name": "初生嬰兒攝影 BB相・上門或荃灣影樓",
@@ -927,6 +978,16 @@
     .svc-hero .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 /* option-a */
     .nav-lang-mobile, .nav-lang-mobile a { color: oklch(46% 0.012 90); }
+    .svc-answer { max-width: 740px; margin: 0 auto 28px; color: var(--fg); font-size: 16px; line-height: 1.9; }
+    .svc-crumbline { display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .svc-crumbline .section-label { font-size: 13px; margin: 0; }
+    .svc-crumbline .section-label::before { content: "\00B7"; margin-right: 10px; color: var(--muted); }
+    .breadcrumb { font-size: 13px; letter-spacing: 0.04em; }
+    .breadcrumb ol { list-style: none; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .breadcrumb li + li::before { content: "\203A"; margin-right: 8px; color: var(--muted); }
+    .breadcrumb a { color: var(--muted); }
+    .breadcrumb a:hover { color: var(--accent-deep); }
+    .breadcrumb [aria-current] { color: var(--fg); }
     .svc-proof { padding: 0 0 80px; text-align: center; }
     .svc-proof p { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
     .service-card h3 a { color: inherit; text-decoration: none; }
@@ -954,11 +1015,22 @@
     </div>
   </nav>
 
-  <section class="svc-hero" id="hero" aria-labelledby="svc-heading">
+  <main>
+<article>
+<section class="svc-hero" id="hero" aria-labelledby="svc-heading">
     <div class="container">
-      <span class="section-label">Newborn</span>
+      <div class="svc-crumbline">
+        <nav class="breadcrumb" aria-label="麵包屑">
+          <ol>
+            <li><a href="/">首頁</a></li>
+            <li><span aria-current="page">初生 BB</span></li>
+          </ol>
+        </nav>
+        <span class="section-label">Newborn</span>
+      </div>
       <h1 id="svc-heading">初生嬰兒攝影・BB相</h1>
       <p>初生照（BB相）· 建議出生後 7-14 日拍攝 · 可上門或嚟荃灣 Studio</p>
+      <p class="svc-answer">建議出生後 7–14 日影。可以揀上門拍攝,或者嚟荃灣 TML Tower 影樓,套餐 HKD 3,800 起;上門拍攝加 $1,000。</p>
       <div class="hero-cta">
         <a href="https://ig.me/m/BABYG.PHOTO" target="_blank" rel="noopener" class="btn btn-primary">IG DM 查詢</a>
         <a href="#packages" class="btn btn-outline">查看套餐</a>
@@ -1113,13 +1185,13 @@
         <h2 id="faq-heading">常見問題</h2>
       </div>
       <div class="faq-list fade-in">
-        <details class="faq-item" data-cat="newborn"><summary>預約流程係點？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">選擇 Package → 落訂確認 → 拍攝日期同時間可以預早約或等 BB 出世再約。</div></details>
-        <details class="faq-item" data-cat="newborn"><summary>初生 BB 幾時拍攝最好？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">建議最佳拍攝期為出生後 <strong>7-14 日</strong>，因為呢個階段 BB嘅關節同肌肉仲係好柔軟，另外大部分時間處於深度睡眠，更容易配合拍攝。初生 BB 個樣變得好快，所以千祈唔好錯過呢個珍貴時刻。</div></details>
-        <details class="faq-item" data-cat="newborn"><summary>有沒有上門服務？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋有提供上門服務或可以嚟我哋 Studio（荃灣 TML TOWER）。</div></details>
-        <details class="faq-item" data-cat="newborn"><summary>上門和 Studio 拍攝有什麼分別？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">有部分造型道具比較大型，較難帶上門，所以只限 Studio 拍攝。</div></details>
-        <details class="faq-item" data-cat="newborn"><summary>初生 BB 相上門影定去影樓好？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">兩種都可以。上門影 BB 方便初生寶寶，唔使舟車勞頓；影樓（荃灣 Studio）則有更多造型場景同道具選擇。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>如果拍攝當日天氣惡劣？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">黑雨 / 8 號風球或以上，可安排<strong>免費改期一次</strong>。如需改期，請於拍攝時間前最少兩小時通知我哋。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>你哋影樓喺邊度？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋 Studio 位於<strong>荃灣 TML Tower</strong>，交通方便，大廈內設有停車場。</div></details>
+        <details class="faq-item" data-cat="newborn"><summary>預約流程係點？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">選擇 Package → 落訂確認 → 拍攝日期同時間可以預早約或等 BB 出世再約。</p></details>
+        <details class="faq-item" data-cat="newborn"><summary>初生 BB 幾時拍攝最好？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">建議最佳拍攝期為出生後 <strong>7-14 日</strong>，因為呢個階段 BB嘅關節同肌肉仲係好柔軟，另外大部分時間處於深度睡眠，更容易配合拍攝。初生 BB 個樣變得好快，所以千祈唔好錯過呢個珍貴時刻。</p></details>
+        <details class="faq-item" data-cat="newborn"><summary>有沒有上門服務？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">我哋有提供上門服務或可以嚟我哋 Studio（荃灣 TML TOWER）。</p></details>
+        <details class="faq-item" data-cat="newborn"><summary>上門和 Studio 拍攝有什麼分別？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">有部分造型道具比較大型，較難帶上門，所以只限 Studio 拍攝。</p></details>
+        <details class="faq-item" data-cat="newborn"><summary>初生 BB 相上門影定去影樓好？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">兩種都可以。上門影 BB 方便初生寶寶，唔使舟車勞頓；影樓（荃灣 Studio）則有更多造型場景同道具選擇。</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>如果拍攝當日天氣惡劣？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">黑雨 / 8 號風球或以上，可安排<strong>免費改期一次</strong>。如需改期，請於拍攝時間前最少兩小時通知我哋。</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>你哋影樓喺邊度？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">我哋 Studio 位於<strong>荃灣 TML Tower</strong>，交通方便，大廈內設有停車場。</p></details>
       </div>
     </div>
   </section>
@@ -1161,6 +1233,9 @@
       </div>
     </div>
   </section>
+</article>
+</main>
+
 
 <footer class="footer" role="contentinfo">
     <div class="container">

@@ -104,6 +104,57 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://www.gypphoto.com/maternity/#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://www.gypphoto.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "孕婦攝影",
+      "item": "https://www.gypphoto.com/maternity/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.gypphoto.com/#website",
+  "url": "https://www.gypphoto.com/",
+  "name": "Gypsophila Photography",
+  "inLanguage": "zh-HK",
+  "publisher": {
+    "@id": "https://www.gypphoto.com/#business"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.gypphoto.com/maternity/#webpage",
+  "url": "https://www.gypphoto.com/maternity/",
+  "name": "荃灣孕婦攝影・大肚相 / 孕婦寫真 | Gypsophila Photography",
+  "inLanguage": "zh-HK",
+  "dateModified": "2026-09-17",
+  "isPartOf": {
+    "@id": "https://www.gypphoto.com/#website"
+  },
+  "about": {
+    "@id": "https://www.gypphoto.com/#business"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.gypphoto.com/maternity/#service",
   "name": "荃灣孕婦攝影・大肚相 / 孕婦寫真",
@@ -943,6 +994,16 @@
     .svc-hero .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 /* option-a */
     .nav-lang-mobile, .nav-lang-mobile a { color: oklch(46% 0.012 90); }
+    .svc-answer { max-width: 740px; margin: 0 auto 28px; color: var(--fg); font-size: 16px; line-height: 1.9; }
+    .svc-crumbline { display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .svc-crumbline .section-label { font-size: 13px; margin: 0; }
+    .svc-crumbline .section-label::before { content: "\00B7"; margin-right: 10px; color: var(--muted); }
+    .breadcrumb { font-size: 13px; letter-spacing: 0.04em; }
+    .breadcrumb ol { list-style: none; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .breadcrumb li + li::before { content: "\203A"; margin-right: 8px; color: var(--muted); }
+    .breadcrumb a { color: var(--muted); }
+    .breadcrumb a:hover { color: var(--accent-deep); }
+    .breadcrumb [aria-current] { color: var(--fg); }
     .svc-proof { padding: 0 0 80px; text-align: center; }
     .svc-proof p { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
     .service-card h3 a { color: inherit; text-decoration: none; }
@@ -970,11 +1031,22 @@
     </div>
   </nav>
 
-  <section class="svc-hero" id="hero" aria-labelledby="svc-heading">
+  <main>
+<article>
+<section class="svc-hero" id="hero" aria-labelledby="svc-heading">
     <div class="container">
-      <span class="section-label">Maternity</span>
+      <div class="svc-crumbline">
+        <nav class="breadcrumb" aria-label="麵包屑">
+          <ol>
+            <li><a href="/">首頁</a></li>
+            <li><span aria-current="page">孕婦攝影</span></li>
+          </ol>
+        </nav>
+        <span class="section-label">Maternity</span>
+      </div>
       <h1 id="svc-heading">荃灣孕婦攝影・大肚相</h1>
       <p>孕婦攝影（大肚相 / 孕婦寫真）· 自然風、黑白風及韓式風格 · 荃灣山景影樓同家居風場景</p>
+      <p class="svc-answer">喺荃灣 TML Tower 影樓拍攝,建議懷孕 28–32 週影。每節 45 至 120 分鐘(視套餐),套餐 HKD 2,800 起,已包化妝及髮型造型同孕婦服飾租借。</p>
       <div class="hero-cta">
         <a href="https://ig.me/m/gypsophila_photo" target="_blank" rel="noopener" class="btn btn-primary">IG DM 查詢</a>
         <a href="#packages" class="btn btn-outline">查看套餐</a>
@@ -1167,15 +1239,15 @@
         <h2 id="faq-heading">常見問題</h2>
       </div>
       <div class="faq-list fade-in">
-        <details class="faq-item" data-cat="maternity" open><summary>預約流程係點？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">選擇 Package → 選擇拍攝日期和時間 → 落訂確認</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>幾多週拍攝最理想？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">建議 <strong>28-32 週</strong>拍攝，因為 36 週後肚子急速增大，部分媽媽亦會出現水腫、腰背疼痛等情況。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>有冇化妝服務？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">所有孕婦拍攝套餐已經包咗化妝及髮型造型服務。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>衣服要準備嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋有多款衣服提供畀孕婦媽媽配搭選擇，爸爸衣服需自備。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>需要準備道具嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">可以準備 BB 超聲波相、衫仔鞋仔、自製相簿或對你哋有紀念價值嘅小道具，令輯相更加獨一無二。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>有咩拍攝風格可以揀？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">孕婦攝影（大肚相 / 孕婦寫真）提供自然風、黑白風及韓式風格，可按你喜好配搭。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>可以帶毛孩一起拍攝嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。加人（包括毛孩）每位 $300。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>如果拍攝當日天氣惡劣？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">黑雨 / 8 號風球或以上，可安排<strong>免費改期一次</strong>。如需改期，請於化妝時間前最少兩小時通知我哋。</div></details>
-        <details class="faq-item" data-cat="maternity"><summary>你哋影樓喺邊度？<span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer">我哋 Studio 位於<strong>荃灣 TML Tower</strong>，交通方便，大廈內設有停車場。</div></details>
+        <details class="faq-item" data-cat="maternity" open><summary>預約流程係點？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">選擇 Package → 選擇拍攝日期和時間 → 落訂確認</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>幾多週拍攝最理想？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">建議 <strong>28-32 週</strong>拍攝，因為 36 週後肚子急速增大，部分媽媽亦會出現水腫、腰背疼痛等情況。</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>有冇化妝服務？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">所有孕婦拍攝套餐已經包咗化妝及髮型造型服務。</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>衣服要準備嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">我哋有多款衣服提供畀孕婦媽媽配搭選擇，爸爸衣服需自備。</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>需要準備道具嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">可以準備 BB 超聲波相、衫仔鞋仔、自製相簿或對你哋有紀念價值嘅小道具，令輯相更加獨一無二。</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>有咩拍攝風格可以揀？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">孕婦攝影（大肚相 / 孕婦寫真）提供自然風、黑白風及韓式風格，可按你喜好配搭。</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>可以帶毛孩一起拍攝嗎？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">毛孩都係屋企人，非常歡迎帶埋佢哋一齊嚟影相。加人（包括毛孩）每位 $300。</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>如果拍攝當日天氣惡劣？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">黑雨 / 8 號風球或以上，可安排<strong>免費改期一次</strong>。如需改期，請於化妝時間前最少兩小時通知我哋。</p></details>
+        <details class="faq-item" data-cat="maternity"><summary>你哋影樓喺邊度？<span class="faq-icon" aria-hidden="true">+</span></summary><p class="faq-answer">我哋 Studio 位於<strong>荃灣 TML Tower</strong>，交通方便，大廈內設有停車場。</p></details>
       </div>
     </div>
   </section>
@@ -1217,6 +1289,9 @@
       </div>
     </div>
   </section>
+</article>
+</main>
+
 
 <footer class="footer" role="contentinfo">
     <div class="container">
